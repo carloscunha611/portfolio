@@ -405,28 +405,28 @@ main #portfolio .web-sites .site-list li.active a img {
   width: 100%;
 }
 main #portfolio .web-sites .site-list li.active:nth-child(1):hover {
-  background: url("../assets/icons/ihuul-bg.png") center/cover no-repeat;
+  background: url("./assets/icons/ihuul-bg.png") center/cover no-repeat;
 }
 main #portfolio .web-sites .site-list li.active:nth-child(2):hover {
-  background: url("../assets/icons/bs-bg.png") center/cover no-repeat;
+  background: url("./assets/icons/bs-bg.png") center/cover no-repeat;
 }
 main #portfolio .web-sites .site-list li.active:nth-child(3):hover {
-  background: url("../assets/icons/projectFalcon-bg.png") center/cover no-repeat;
+  background: url("./assets/icons/projectFalcon-bg.png") center/cover no-repeat;
 }
 main #portfolio .web-sites .site-list li.active:nth-child(4):hover {
-  background: url("../assets/icons/FoxFoxgo-bg.png") center/cover no-repeat;
+  background: url("./assets/icons/FoxFoxgo-bg.png") center/cover no-repeat;
 }
 main #portfolio .web-sites .site-list li.active:nth-child(5):hover {
-  background: url("../assets/icons/bg-habits.png") center/cover no-repeat;
+  background: url("./assets/icons/bg-habits.png") center/cover no-repeat;
 }
 main #portfolio .web-sites .site-list li.active:nth-child(6):hover {
-  background: url("../assets/icons/bg-marioBros.png") center/cover no-repeat;
+  background: url("./assets/icons/bg-marioBros.png") center/cover no-repeat;
 }
 main #portfolio .web-sites .site-list li.active:nth-child(7):hover {
-  background: url("../assets/icons/bg-myTrovoSpace.png") center/cover no-repeat;
+  background: url("./assets/icons/bg-myTrovoSpace.png") center/cover no-repeat;
 }
 main #portfolio .web-sites .site-list li.active:nth-child(8):hover {
-  background: url("../assets/icons/bg-vaultCard.png") center/cover no-repeat;
+  background: url("./assets/icons/bg-vaultCard.png") center/cover no-repeat;
 }
 main #about {
   display: flex;
