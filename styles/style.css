@@ -455,14 +455,22 @@ main #about ul fieldset li img:hover {
   transition: all 0.3s ease;
   transform: scale(1.2);
 }
+main #contact {
+  display: flex;
+  align-items: center;
+}
 main #contact form {
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 0.5rem;
-  width: 50%;
+  width: 32rem;
   height: 32rem;
-  top: 6rem;
+}
+main #contact form .success {
+  font-size: 1rem;
+  color: #f2ce66;
 }
 main #contact form label {
   font-size: 1.5rem;
@@ -479,12 +487,12 @@ main #contact form textarea {
   border-radius: 0.3rem;
   padding: 1rem;
   border: none;
-  width: 100%;
+  width: 32rem;
   height: 4rem;
   min-height: 4rem;
   max-height: 8rem;
   min-width: 10rem;
-  max-width: 100%;
+  max-width: 32rem;
 }
 main #contact form button {
   font-size: 1.5rem;
@@ -492,6 +500,9 @@ main #contact form button {
 }
 main #contact form :focus-visible {
   outline: #f2ce66 solid 1px;
+}
+main #contact img {
+  width: 32rem;
 }
 
 @keyframes buttomAnimation {
