@@ -1,0 +1,558 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style: none;
+  font-family: "Rubik", sans-serif;
+  text-decoration: none;
+  color: #cecece;
+}
+* ::selection {
+  color: #108944;
+  background-color: #f2ce66;
+}
+
+body {
+  display: block;
+  align-content: center;
+  background: url(../assets/bgimgH.jpg) center/cover;
+  min-width: 20rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+aside {
+  position: fixed;
+  width: 16rem;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: auto;
+  font-family: "Rubik", sans-serif;
+  padding-bottom: 1.5rem;
+  background: rgba(31, 31, 31, 0.5);
+  backdrop-filter: blur(1px);
+  box-shadow: 4px 0px 8px #000000;
+  transition: all 0.3s ease-in-out;
+  z-index: 3;
+}
+aside .navBar {
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+aside .navBar,
+aside .navBar #menuButtom,
+aside .navBar .perfil,
+aside .navBar .social {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+aside .navBar #menuButtom {
+  justify-content: flex-end;
+  font-size: 2rem;
+}
+aside .navBar #menuButtom .buttom-open {
+  display: none;
+}
+aside .navBar #menuButtom ion-icon {
+  padding: 1rem;
+  cursor: pointer;
+}
+aside .navBar #menuButtom ion-icon:hover {
+  color: #f2ce66;
+  filter: drop-shadow(0.5rem 0rem 0rem #108944);
+  animation: arrowAnimation-Close infinite 2s ease;
+}
+aside .navBar .perfil {
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 13rem;
+  gap: 0.5rem;
+}
+aside .navBar .perfil .photo {
+  max-width: 8rem;
+  border: 0.3rem solid #cecece;
+  border-radius: 0.3rem;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+aside .navBar .perfil .photo:hover {
+  box-shadow: -0.3rem 0 0 #f2ce66, -0.5rem 0 0 #108944;
+}
+aside .navBar .perfil .nameBio {
+  text-align: center;
+  color: #cecece;
+  user-select: none;
+}
+aside .navBar .perfil .nameBio .name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  transition: all 0.3s ease-in-out;
+}
+aside .navBar .perfil .nameBio .name span {
+  transition: all 0.3s ease-in-out;
+}
+aside .navBar .perfil .nameBio .name:hover span {
+  filter: drop-shadow(-0.2rem 0 0 #108944);
+  color: #f2ce66;
+}
+aside .navBar .perfil .nameBio .bio {
+  font-size: 0.8rem;
+  transition: all 0.3s ease-in-out;
+}
+aside .navBar .perfil .nameBio .bio:hover {
+  color: #108944;
+}
+aside .navBar .buttons {
+  display: grid;
+  align-items: center;
+  margin-top: 2rem;
+  width: 100%;
+  height: 100%;
+}
+aside .navBar .buttons .buttomList {
+  display: flex;
+  flex-direction: column;
+}
+aside .navBar .buttons .buttomList li {
+  display: flex;
+  width: 100%;
+  height: 2.5rem;
+  font-size: 1.5rem;
+}
+aside .navBar .buttons .buttomList li a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: 3.5rem;
+  gap: 0.5rem;
+  color: #cecece;
+  font-weight: 800;
+}
+aside .navBar .buttons .buttomList li:hover {
+  background: rgba(58, 58, 58, 0.5019607843);
+  border-left: 0.2rem solid #cecece;
+}
+aside .navBar .buttons .buttomList li:hover ion-icon {
+  color: #f2ce66;
+  filter: drop-shadow(-0.2rem 0.2rem 0rem #108944);
+  animation: shadow 0.3s;
+  transition: all 0.3s ease;
+}
+aside .navBar .social {
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+  margin-top: 2rem;
+}
+aside .navBar .social .socialMidiaList {
+  display: flex;
+  gap: 2.5rem;
+}
+aside .navBar .social .socialMidiaList li {
+  font-size: 1.5rem;
+}
+aside .navBar .social .socialMidiaList li a {
+  color: #cecece;
+}
+aside .navBar .social .socialMidiaList li:hover ion-icon {
+  color: #f2ce66;
+  filter: drop-shadow(-0.2rem 0.2rem 0rem #108944);
+  animation: shadow 0.3s;
+  transition: all 0.3s ease;
+}
+aside.navBar-close {
+  width: 4rem;
+}
+aside.navBar-close .navBar #menuButtom .buttom-close {
+  display: none;
+}
+aside.navBar-close .navBar #menuButtom ion-icon.buttom-open {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #cecece;
+  filter: drop-shadow(0.5rem 0rem 0rem #cecece);
+  animation: arrowAnimation-Open infinite 2s ease;
+}
+aside.navBar-close .navBar #menuButtom ion-icon.buttom-open:hover {
+  color: #108944;
+  filter: drop-shadow(0.5rem 0rem 0rem #f2ce66);
+}
+aside.navBar-close .navBar .perfil .nameBio {
+  display: none;
+}
+aside.navBar-close .navBar .perfil .photo {
+  margin-top: 1rem;
+  width: 3rem;
+  border: 0.2rem solid #cecece;
+  box-shadow: none;
+}
+aside.navBar-close .navBar .perfil .photo:hover {
+  border: 0.2rem solid #108944;
+}
+aside.navBar-close .navBar .buttons {
+  margin-top: 10rem;
+  justify-content: center;
+  width: 4rem;
+}
+aside.navBar-close .navBar .buttons .buttomList {
+  width: 100%;
+}
+aside.navBar-close .navBar .buttons .buttomList li {
+  display: grid;
+  align-items: center;
+}
+aside.navBar-close .navBar .buttons .buttomList li a {
+  justify-content: center;
+  padding-left: 0rem;
+  width: 4rem;
+}
+aside.navBar-close .navBar .buttons .buttomList li a span {
+  display: none;
+}
+
+main {
+  position: absolute;
+  color: #ccc;
+  width: 100%;
+  height: auto;
+  padding-left: 16rem;
+  /* padding-right: 1rem; */
+  transition: all opacity 1s;
+  opacity: 1;
+}
+main .section-screenHome {
+  position: relative;
+  min-height: 100vh;
+  padding: 8rem 1rem;
+}
+main .section-screen {
+  position: relative;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+main .txt-area {
+  padding-right: 1rem;
+}
+main .txt-area h1 {
+  user-select: none;
+  font-size: 4rem;
+}
+main .txt-area h1 span {
+  filter: drop-shadow(-0.2rem 0 0 #108944);
+  transition: all 0.5s ease-in;
+}
+main .txt-area h1 span:hover {
+  color: #f2ce66;
+}
+main .txt-area div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+}
+main .txt-area div p {
+  width: 64rem;
+  text-align: justify;
+  font-size: 1.5rem;
+}
+main .txt-area div button {
+  height: 4rem;
+  width: 4rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0rem 0.3rem;
+  background: rgba(31, 31, 31, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+main .txt-area div button a {
+  text-align: center;
+  padding: 1.5rem 0rem;
+}
+main .txt-area div button:hover {
+  background: rgba(58, 58, 58, 0.5019607843);
+  box-shadow: 0rem 0.3rem 0rem #108944;
+  cursor: pointer;
+}
+main .txt-area div button:hover a {
+  color: #f2ce66;
+}
+main .txt-area div button:hover[type=submit] {
+  color: #f2ce66;
+}
+main #welcome {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  gap: 8rem;
+}
+main #welcome .txt-welcome {
+  font-size: 4rem;
+  height: 55%;
+  text-align: left;
+  user-select: none;
+  filter: drop-shadow(-0.2rem 0 0 #108944);
+}
+main #welcome .txt-welcome span::before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #f2ce66, #108944);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0rem 0 0 transparent);
+  content: "C";
+  position: absolute;
+  font-family: "Rubik Glitch", sans-serif;
+  font-size: 5rem;
+  top: 8rem;
+  left: 25.5rem;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+  opacity: 0;
+}
+main #welcome .txt-welcome span:hover::before {
+  opacity: 1;
+}
+main #welcome .contact {
+  position: relative;
+  width: 16rem;
+  height: 4rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: rgba(31, 31, 31, 0.5);
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+}
+main #welcome .contact a {
+  padding: 1rem 5.5rem;
+  font-size: 1.5rem;
+}
+main #welcome .contact:hover {
+  background: rgba(58, 58, 58, 0.5019607843);
+  box-shadow: 0px 0.3rem 0px #108944;
+}
+main #welcome .contact:hover a {
+  color: #f2ce66;
+}
+main #portfolio {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  gap: 1rem;
+  /* gap: 8rem; */
+}
+main #portfolio .web-sites {
+  display: flex;
+  width: 100%;
+  height: 32rem;
+}
+main #portfolio .web-sites .site-list {
+  position: relative;
+  flex-wrap: wrap;
+  display: flex;
+  width: 64rem;
+}
+main #portfolio .web-sites .site-list li.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+main #portfolio .web-sites .site-list li.active:hover {
+  box-shadow: -0.5rem 0.5rem 0 rgba(58, 58, 58, 0.5019607843);
+}
+main #portfolio .web-sites .site-list li.active:hover a::after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: "Abrir site";
+  text-align: center;
+  padding: 0rem 0.7rem 0rem 0.7rem;
+  color: #f2ce66;
+  background: rgba(31, 31, 31, 0.5);
+  border-radius: 0.5rem;
+  border-left: 0.5rem solid #108944;
+  font-size: 1.5rem;
+  width: 8rem;
+  height: 8rem;
+}
+main #portfolio .web-sites .site-list li.active:hover a img {
+  display: none;
+}
+main #portfolio .web-sites .site-list li.active a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 0.5rem;
+}
+main #portfolio .web-sites .site-list li.active a img {
+  width: 100%;
+}
+main #portfolio .web-sites .site-list li.active:nth-child(1):hover {
+  background: url("../assets/icons/ihuul-bg.png") center/cover no-repeat;
+}
+main #portfolio .web-sites .site-list li.active:nth-child(2):hover {
+  background: url("../assets/icons/bs-bg.png") center/cover no-repeat;
+}
+main #portfolio .web-sites .site-list li.active:nth-child(3):hover {
+  background: url("../assets/icons/projectFalcon-bg.png") center/cover no-repeat;
+}
+main #portfolio .web-sites .site-list li.active:nth-child(4):hover {
+  background: url("../assets/icons/FoxFoxgo-bg.png") center/cover no-repeat;
+}
+main #portfolio .web-sites .site-list li.active:nth-child(5):hover {
+  background: url("../assets/icons/bg-habits.png") center/cover no-repeat;
+}
+main #portfolio .web-sites .site-list li.active:nth-child(6):hover {
+  background: url("../assets/icons/bg-marioBros.png") center/cover no-repeat;
+}
+main #portfolio .web-sites .site-list li.active:nth-child(7):hover {
+  background: url("../assets/icons/bg-myTrovoSpace.png") center/cover no-repeat;
+}
+main #portfolio .web-sites .site-list li.active:nth-child(8):hover {
+  background: url("../assets/icons/bg-vaultCard.png") center/cover no-repeat;
+}
+main #about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main #about ul {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 5rem;
+}
+main #about ul fieldset {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0 2rem;
+  gap: 1rem;
+  font-size: 3rem;
+}
+main #about ul fieldset li img {
+  width: 4rem;
+}
+main #about ul fieldset li img:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.2);
+}
+main #contact form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 50%;
+  height: 32rem;
+  top: 6rem;
+}
+main #contact form label {
+  font-size: 1.5rem;
+}
+main #contact form input {
+  background: rgba(31, 31, 31, 0.5);
+  border-radius: 0.3rem;
+  padding-left: 1rem;
+  border: none;
+  height: 2rem;
+}
+main #contact form textarea {
+  background: rgba(31, 31, 31, 0.5);
+  border-radius: 0.3rem;
+  padding: 1rem;
+  border: none;
+  width: 100%;
+  height: 4rem;
+  min-height: 4rem;
+  max-height: 8rem;
+  min-width: 10rem;
+  max-width: 100%;
+}
+main #contact form button {
+  font-size: 1.5rem;
+  width: 10rem;
+}
+main #contact form :focus-visible {
+  outline: #f2ce66 solid 1px;
+}
+
+@keyframes buttomAnimation {
+  0% {
+    color: #cecece;
+  }
+  25% {
+    color: #f2ce66;
+  }
+  50% {
+    color: #108944;
+  }
+  100% {
+    color: #cecece;
+  }
+}
+@keyframes arrowAnimation-Close {
+  0% {
+    transform: translateX(0rem);
+  }
+  50% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}
+@keyframes arrowAnimation-Open {
+  0% {
+    transform: translateX(0rem);
+  }
+  50% {
+    transform: translateX(0.5rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}
+@keyframes noise {
+  to {
+    background: linear-gradient(rgba(10, 10, 10, 0.1), rgba(0, 0, 0, 0.1)), repeating-linear-gradient(0, transparent, transparent 2px, #141414 2px, #141414 2px), url(../assets/bgimgH.jpg) center/cover;
+  }
+  from {
+    background: linear-gradient(rgba(10, 10, 10, 0.2), rgba(0, 0, 0, 0.1)), repeating-linear-gradient(0, transparent, transparent 1px, #141414 2px, #141414 2px), url(../assets/bgimgH.jpg) center/cover;
+  }
+}
+@keyframes shadow {
+  0% {
+    filter: drop-shadow(0rem 0rem 0rem transparent);
+  }
+  50% {
+    filter: drop-shadow(-0.1rem 0.1rem 0rem #108944);
+  }
+  100% {
+    filter: drop-shadow(-0.2rem 0.2rem 0rem #108944);
+  }
+}
+@media screen and (max-width: 1300px) {
+  .section-screen:first-child {
+    padding-top: 8rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

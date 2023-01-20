@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Carlos Cunha | Desenvolvedor Front End</title>
+  </head>
+  <body>
+    <aside id="aside" class="">
+      <nav class="navBar" id="navBar">
+        <div id="menuButtom" class="close">
+          <ion-icon
+            onclick="menuClose()"
+            class="buttom-close"
+            name="chevron-back"
+          ></ion-icon>
+          <ion-icon
+            onclick="menuClose()"
+            class="buttom-open"
+            name="chevron-forward"
+          ></ion-icon>
+        </div>
+        <div class="perfil">
+          <img
+            id="userImage"
+            class="photo"
+            src="./assets/logo.png"
+            alt="Foto do Carlos. Moreno lindo"
+          />
+          <div class="nameBio">
+            <p class="name" id="userName">
+              <span>C</span>arlos <span>C</span>unha
+            </p>
+            <p class="bio" id="userBio"></p>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <ul class="buttomList">
+            <li>
+              <a href="#portfolio"
+                ><ion-icon name="grid"></ion-icon><span>Portfolio</span></a
+              >
+            </li>
+            <li>
+              <a href="#about"
+                ><ion-icon name="reader"></ion-icon><span>Sobre</span></a
+              >
+            </li>
+            <li>
+              <a href="#contact"
+                ><ion-icon name="mail"></ion-icon><span>Contato</span></a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="social">
+          <ul class="socialMidiaList">
+            <li>
+              <a href="#" target="_blank"
+                ><ion-icon name="logo-linkedin"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><ion-icon name="logo-github"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><ion-icon name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+    <main id="main">
+      <section id="welcome" class="section-screenHome">
+        <div class="txt-welcome">
+          <h1>
+            Olá,<br />
+            eu sou o <span>C</span>arlos<br />
+            Desenvolvedor web.
+          </h1>
+        </div>
+        <button class="contact">
+          <a href="#contact">Contato</a>
+        </button>
+      </section>
+      <section id="portfolio" class="section-screen">
+        <div class="txt-area">
+          <h1><span>M</span>eu <span>P</span>ortifólio</h1>
+          <div>
+            <p>
+              Aqui está a minha galeria de alguns sites criados por mim,
+              projetos realizados em aulas ou como estudo.
+            </p>
+            <button>
+              <a href="#">Veja mais</a>
+            </button>
+          </div>
+        </div>
+        <div class="web-sites">
+          <ul class="site-list">
+            <li class="active">
+              <a href="#">
+                <img src="./assets/icons/ihuul.png" alt="ihuul" />
+              </a>
+            </li>
+            <li class="active">
+              <a href="#">
+                <img src="./assets/icons/bs.png" alt="" />
+              </a>
+            </li>
+            <li class="active">
+              <a href="#">
+                <img
+                  src="./assets/icons/projectFalcon.png"
+                  alt="Project Falcon"
+                />
+              </a>
+            </li>
+            <li class="active">
+              <a href="#">
+                <img src="./assets/icons/FoxFoxGo.png" alt="FoxFoxGo!" />
+              </a>
+            </li>
+            <li class="active">
+              <a href="#">
+                <img src="./assets/icons/habits.png" alt="habits" />
+              </a>
+            </li>
+            <li class="active">
+              <a href="#">
+                <img src="./assets/icons/marioBros.png" alt="" />
+              </a>
+            </li>
+            <li class="active">
+              <a href="#">
+                <img src="./assets/icons/myTrovoSpace.png" alt="" />
+              </a>
+            </li>
+            <li class="active">
+              <a href="#">
+                <img src="./assets/icons/vaultCard.png" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="about" class="section-screen">
+        <div class="txt-area">
+          <h1><span>S</span>obre</h1>
+          <ul>
+            <fieldset>
+              <legend>Formação:</legend>
+              <li>Análise e desenvolvimento de sistemas</li>
+            </fieldset>
+            <fieldset>
+              <legend>Conhecimentos:</legend>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain-wordmark.svg"
+                />
+              </li>
+              <li>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bulma/bulma-plain.svg"
+                />
+              </li>
+            </fieldset>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="section-screen">
+        <div class="txt-area">
+          <h1><span>C</span>ontato</h1>
+          <div>
+            <form
+              action="https://formsubmit.co/24834d32455b39aab58faf456c026c5d"
+              method="POST"
+              data-form
+            >
+              <label for="name">Nome</label>
+              <input
+                id="name"
+                type="text"
+                name="name"
+                autocomplete="off"
+                placeholder="Digite seu nome aqui."
+                required
+              />
+
+              <label for="email">E-mail</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                autocomplete="off"
+                placeholder="Digite seu e-mail aqui."
+                required
+              />
+
+              <label for="mensage">Mensagem</label>
+              <textarea
+                id="mensage"
+                name="mensage"
+                placeholder="Digite sua mensagem aqui."
+              ></textarea>
+              <input type="hidden" name="_captcha" value="false" />
+              <button type="submit" data-button>Enviar</button>
+            </form>
+            <img src="./assets/@.png" alt="email" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="./JavaScript/main.js"></script>
+    <script src="./JavaScript/form.js"></script>
+  </body>
+</html>
