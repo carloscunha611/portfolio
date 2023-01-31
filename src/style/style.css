@@ -1,0 +1,878 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style: none;
+  font-family: "Rubik", sans-serif;
+  text-decoration: none;
+  color: #cecece;
+}
+* ::selection {
+  color: #108944;
+  background-color: #f2ce66;
+}
+* a {
+  text-decoration: none;
+}
+
+body {
+  display: block;
+  align-content: center;
+  background: url("../../src/assets/bgimgH.jpg") center/cover;
+  min-width: 20rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.navBar-mobile {
+  display: none;
+}
+
+aside {
+  position: fixed;
+  width: 16rem;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: auto;
+  font-family: "Rubik", sans-serif;
+  padding-bottom: 1.5rem;
+  background: rgba(31, 31, 31, 0.5019607843);
+  backdrop-filter: blur(1px);
+  box-shadow: 4px 0px 8px #000000;
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
+}
+aside .navBar {
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+aside .navBar,
+aside .navBar #menubutton,
+aside .navBar .perfil,
+aside .navBar .social {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+aside .navBar #menubutton {
+  justify-content: flex-end;
+  font-size: 2rem;
+}
+aside .navBar #menubutton .button-open {
+  display: none;
+}
+aside .navBar #menubutton ion-icon {
+  padding: 1rem;
+  cursor: pointer;
+}
+aside .navBar #menubutton ion-icon:hover {
+  color: #f2ce66;
+  filter: drop-shadow(0.5rem 0rem 0rem #108944);
+  animation: arrowAnimation-Close infinite 2s ease;
+}
+aside .navBar .perfil {
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 13rem;
+  gap: 0.5rem;
+}
+aside .navBar .perfil .photo {
+  max-width: 8rem;
+  border: 0.3rem solid #cecece;
+  border-radius: 0.3rem;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+aside .navBar .perfil .photo:hover {
+  box-shadow: -0.3rem 0 0 #f2ce66, -0.5rem 0 0 #108944;
+}
+aside .navBar .perfil .nameBio {
+  text-align: center;
+  color: #cecece;
+  user-select: none;
+}
+aside .navBar .perfil .nameBio .name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  transition: all 0.3s ease-in-out;
+}
+aside .navBar .perfil .nameBio .name span {
+  transition: all 0.3s ease-in-out;
+}
+aside .navBar .perfil .nameBio .name:hover span {
+  filter: drop-shadow(-0.2rem 0 0 #108944);
+  color: #f2ce66;
+}
+aside .navBar .perfil .nameBio .bio {
+  font-size: 0.8rem;
+  transition: all 0.3s ease-in-out;
+}
+aside .navBar .perfil .nameBio .bio:hover {
+  color: #108944;
+}
+aside .navBar .buttons {
+  display: grid;
+  align-items: center;
+  margin-top: 2rem;
+  width: 100%;
+  height: 100%;
+}
+aside .navBar .buttons .buttonList {
+  display: flex;
+  flex-direction: column;
+}
+aside .navBar .buttons .buttonList li {
+  display: flex;
+  width: 100%;
+  height: 2.5rem;
+  font-size: 1.5rem;
+}
+aside .navBar .buttons .buttonList li a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: 3.5rem;
+  gap: 0.5rem;
+  color: #cecece;
+  font-weight: 800;
+}
+aside .navBar .buttons .buttonList li:hover {
+  background: rgba(58, 58, 58, 0.5019607843);
+  border-left: 0.2rem solid rgba(206, 206, 206, 0.5019607843);
+}
+aside .navBar .buttons .buttonList li:hover ion-icon {
+  color: #f2ce66;
+  filter: drop-shadow(-0.2rem 0.2rem 0rem #108944);
+  animation: shadow 0.3s;
+  transition: all 0.3s ease;
+}
+aside .navBar .social {
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+  margin-top: 2rem;
+}
+aside .navBar .social .socialMidiaList {
+  display: flex;
+  gap: 2.5rem;
+}
+aside .navBar .social .socialMidiaList li {
+  font-size: 1.5rem;
+}
+aside .navBar .social .socialMidiaList li a {
+  color: #cecece;
+}
+aside .navBar .social .socialMidiaList li:hover ion-icon {
+  color: #f2ce66;
+  filter: drop-shadow(-0.2rem 0.2rem 0rem #108944);
+  animation: shadow 0.3s;
+  transition: all 0.3s ease;
+}
+aside.navBar-close {
+  width: 4rem;
+}
+aside.navBar-close .navBar #menubutton .button-close {
+  display: none;
+}
+aside.navBar-close .navBar #menubutton ion-icon.button-open {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #cecece;
+  filter: drop-shadow(0.5rem 0rem 0rem #cecece);
+  animation: arrowAnimation-Open infinite 2s ease;
+}
+aside.navBar-close .navBar #menubutton ion-icon.button-open:hover {
+  color: #108944;
+  filter: drop-shadow(0.5rem 0rem 0rem #f2ce66);
+}
+aside.navBar-close .navBar .perfil .nameBio {
+  display: none;
+}
+aside.navBar-close .navBar .perfil .photo {
+  margin-top: 1rem;
+  width: 3rem;
+  border: 0.2rem solid #cecece;
+  box-shadow: none;
+}
+aside.navBar-close .navBar .perfil .photo:hover {
+  border: 0.2rem solid #108944;
+}
+aside.navBar-close .navBar .buttons {
+  margin-top: 10rem;
+  justify-content: center;
+  width: 4rem;
+}
+aside.navBar-close .navBar .buttons .buttonList {
+  width: 100%;
+}
+aside.navBar-close .navBar .buttons .buttonList li {
+  display: grid;
+  align-items: center;
+}
+aside.navBar-close .navBar .buttons .buttonList li a {
+  justify-content: center;
+  padding-left: 0rem;
+  width: 4rem;
+}
+aside.navBar-close .navBar .buttons .buttonList li a span {
+  display: none;
+}
+
+main {
+  position: absolute;
+  color: #ccc;
+  width: 100%;
+  height: auto;
+  padding-left: 4rem;
+  transition: all opacity 1s;
+}
+main .section-screen {
+  position: relative;
+  min-height: 100vh;
+  padding: 1rem 4rem;
+  border-bottom: 2px dotted #cecece;
+  /* overflow: hidden; */
+}
+main .txt-area h1 {
+  user-select: none;
+  font-size: 4rem;
+}
+main .txt-area h1 span {
+  filter: drop-shadow(-0.2rem 0 0 #108944);
+  transition: all 0.5s ease-in;
+}
+main .txt-area h1 span:hover {
+  color: #f2ce66;
+}
+main .txt-area div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+main .txt-area div p {
+  width: 90%;
+  text-align: justify;
+  font-size: 1.5rem;
+}
+main .txt-area div .button {
+  height: 4rem;
+  width: 4rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0rem 0.3rem;
+  background: rgba(31, 31, 31, 0.5019607843);
+  transition: all 0.3s ease-in-out;
+}
+main .txt-area div .button a {
+  text-align: center;
+  padding: 1.5rem 0rem;
+}
+main .txt-area div .button:hover {
+  background: rgba(58, 58, 58, 0.5019607843);
+  box-shadow: 0rem 0.3rem 0rem #108944;
+  cursor: pointer;
+}
+main .txt-area div .button:hover a {
+  color: #f2ce66;
+}
+main .txt-area div .button:hover[type=submit] {
+  color: #f2ce66;
+}
+main .button-contact {
+  width: 8rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: #cecece;
+  z-index: 1;
+}
+main .button-contact::after, main .button-contact::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all 0.4s;
+}
+main .button-contact::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: rgba(58, 58, 58, 0.5019607843);
+  border-radius: 0.5rem;
+}
+main .button-contact::after {
+  transform: translate(10px, 10px);
+  width: 2rem;
+  height: 2rem;
+  background: rgba(255, 255, 255, 0.0823529412);
+  backdrop-filter: blur(5px);
+  border-radius: 50%;
+}
+main .button-contact:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+main .button-contact:hover::after {
+  border-radius: 0.5rem;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+main .button-contact:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
+}
+main .button-contact:hover {
+  color: #f2ce66;
+}
+main .button-contact:hover a {
+  color: #f2ce66;
+}
+main #welcome {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 4rem;
+  gap: 4rem;
+}
+main #welcome .txt-welcome {
+  font-size: 4rem;
+  height: 75%;
+  text-align: left;
+  user-select: none;
+  filter: drop-shadow(-0.2rem 0 0 #108944);
+}
+main #welcome .txt-welcome span::before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #f2ce66, #108944);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0rem 0 0 transparent);
+  content: "C";
+  position: absolute;
+  font-family: "Rubik Glitch", sans-serif;
+  font-size: 5rem;
+  top: 8rem;
+  left: 25.5rem;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+  opacity: 0;
+}
+main #welcome .txt-welcome span:hover::before, main #welcome .txt-welcome span:focus::before {
+  opacity: 1;
+}
+main #welcome .contact {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16rem;
+  height: 4rem;
+  margin-left: 2rem;
+}
+main #welcome .contact a {
+  width: 100%;
+  height: 4rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+main #portfolio {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  gap: 2rem;
+}
+main #portfolio div {
+  gap: 2rem;
+}
+main #portfolio .web-sites {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+main #portfolio .web-sites .site-list {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 0rem;
+  height: 100%;
+  width: 100%;
+  gap: 2rem;
+}
+main #portfolio .web-sites .site-list li.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 16rem;
+}
+main #portfolio .web-sites .site-list li.active .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(31, 31, 31, 0.5019607843);
+  backdrop-filter: blur(1px);
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  border: 2px solid rgba(206, 206, 206, 0.5019607843);
+  transition: 0.5s ease-out;
+  overflow: visible;
+  gap: 2rem;
+}
+main #portfolio .web-sites .site-list li.active .details .web-site-icon {
+  position: absolute;
+  border-radius: 0.3rem 0rem;
+  top: 0px;
+  left: 0px;
+  width: 2rem;
+  border: 2px solid rgba(206, 206, 206, 0.5019607843);
+  transition: 0.3s ease-out;
+}
+main #portfolio .web-sites .site-list li.active .details .moldura {
+  width: 8rem;
+  height: 8rem;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  border: 2px solid rgba(206, 206, 206, 0.5019607843);
+  transition: 0.3s ease-out;
+}
+main #portfolio .web-sites .site-list li.active .details .moldura img {
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main #portfolio .web-sites .site-list li.active .web-site-button {
+  position: absolute;
+  transform: translate(0%, 500%);
+  width: 8rem;
+  border-radius: 0.5rem;
+  border: 2px solid rgba(206, 206, 206, 0.5019607843);
+  background: rgba(31, 31, 31, 0.5019607843);
+  backdrop-filter: blur(5px);
+  color: #cecece;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  opacity: 0;
+  transition: 0.3s ease-out;
+}
+main #portfolio .web-sites .site-list li.active:hover .details {
+  border-color: #f2ce66;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+main #portfolio .web-sites .site-list li.active:hover .details .web-site-icon {
+  border-color: #f2ce66;
+}
+main #portfolio .web-sites .site-list li.active:hover .details .moldura {
+  border-color: #f2ce66;
+}
+main #portfolio .web-sites .site-list li.active:hover .web-site-button {
+  transform: translate(0%, 330%);
+  border-color: #f2ce66;
+  opacity: 1;
+}
+main #portfolio .web-sites .site-list li.active:hover .web-site-button a:hover {
+  color: #108944;
+}
+main #portfolio .web-sites .site-list li.active:nth-child(even):hover .details {
+  border-color: #108944;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+main #portfolio .web-sites .site-list li.active:nth-child(even):hover .details .web-site-icon {
+  border-color: #108944;
+}
+main #portfolio .web-sites .site-list li.active:nth-child(even):hover .details .moldura {
+  border-color: #108944;
+}
+main #portfolio .web-sites .site-list li.active:nth-child(even):hover .web-site-button {
+  transform: translate(0%, 330%);
+  border-color: #108944;
+  opacity: 1;
+}
+main #portfolio .web-sites .site-list li.active:nth-child(even):hover .web-site-button a:hover {
+  color: #f2ce66;
+}
+main #about .informations {
+  display: flex;
+  height: 32rem;
+  width: 100%;
+}
+main #about .informations ul {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 5rem;
+}
+main #about .informations .infos {
+  width: 50%;
+  height: 100%;
+  border: 2px dotted rgba(206, 206, 206, 0.5019607843);
+  background: rgba(31, 31, 31, 0.5019607843);
+  backdrop-filter: blur(1px);
+}
+main #about .informations .infos ul {
+  flex-direction: column;
+  text-align: center;
+}
+main #about .informations .infos li {
+  font-size: 1rem;
+}
+main #about .informations .infos li span {
+  color: #f2ce66;
+}
+main #about .informations .infos:hover {
+  border-color: #cecece;
+}
+main #about .informations .techs {
+  height: 100%;
+  width: 50%;
+}
+main #about .informations .techs ul {
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+main #about .informations .techs .stack {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 8rem;
+  width: 8rem;
+  padding: 0 0.5rem;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+  background: rgba(31, 31, 31, 0.5019607843);
+}
+main #about .informations .techs .stack span {
+  width: 100%;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  border-right: 1px solid;
+}
+main #about .informations .techs .stack img {
+  width: 4rem;
+}
+main #about .informations .techs .stack::before {
+  content: "";
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  top: 10%;
+  right: 10%;
+  z-index: -98;
+  background: #cecece;
+  animation: move-moonStack 2s ease-in infinite alternate-reverse;
+  transition: all ease 0.3s;
+}
+main #about .informations .techs .stack::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(20px);
+  z-index: -98;
+  background: rgba(37, 37, 37, 0.164);
+}
+main #about .informations .techs .stack:hover:nth-child(odd)::before {
+  background: #f2ce66;
+}
+main #about .informations .techs .stack:hover:nth-child(even)::before {
+  background: #108944;
+}
+main #contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main #contact .form {
+  width: 100%;
+}
+main #contact .form form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 32rem;
+  height: 32rem;
+}
+main #contact .form form .success {
+  font-size: 1rem;
+  color: #f2ce66;
+}
+main #contact .form form label {
+  font-size: 1.5rem;
+}
+main #contact .form form input {
+  background: rgba(31, 31, 31, 0.5019607843);
+  border-radius: 0.3rem;
+  padding-left: 1rem;
+  border: none;
+  height: 2rem;
+}
+main #contact .form form textarea {
+  background: rgba(31, 31, 31, 0.5019607843);
+  border-radius: 0.3rem;
+  padding: 1rem;
+  border: none;
+  width: 32rem;
+  height: 4rem;
+  min-height: 4rem;
+  max-height: 8rem;
+  min-width: 10rem;
+  max-width: 32rem;
+}
+main #contact .form form button {
+  font-size: 1.5rem;
+  width: 10rem;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+main #contact .form form :focus-visible {
+  outline: #f2ce66 solid 1px;
+}
+main #contact .form img {
+  width: 50%;
+  opacity: 0.5;
+}
+
+@keyframes buttonAnimation {
+  0% {
+    color: #cecece;
+  }
+  25% {
+    color: #f2ce66;
+  }
+  50% {
+    color: #108944;
+  }
+  100% {
+    color: #cecece;
+  }
+}
+@keyframes arrowAnimation-Close {
+  0% {
+    transform: translateX(0rem);
+  }
+  50% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}
+@keyframes arrowAnimation-Open {
+  0% {
+    transform: translateX(0rem);
+  }
+  50% {
+    transform: translateX(0.5rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}
+@keyframes noise {
+  to {
+    background: linear-gradient(rgba(10, 10, 10, 0.1), rgba(0, 0, 0, 0.1)), repeating-linear-gradient(0, transparent, transparent 2px, #141414 2px, #141414 2px), url("../../src/assets/bgimgH.jpg") center/cover;
+  }
+  from {
+    background: linear-gradient(rgba(10, 10, 10, 0.2), rgba(0, 0, 0, 0.1)), repeating-linear-gradient(0, transparent, transparent 1px, #141414 2px, #141414 2px), url("../../src/assets/bgimgH.jpg") center/cover;
+  }
+}
+@keyframes shadow {
+  0% {
+    filter: drop-shadow(0rem 0rem 0rem transparent);
+  }
+  50% {
+    filter: drop-shadow(-0.1rem 0.1rem 0rem #108944);
+  }
+  100% {
+    filter: drop-shadow(-0.2rem 0.2rem 0rem #108944);
+  }
+}
+@keyframes move-moonStack {
+  to {
+    transform: translateY(-8px);
+  }
+}
+@media (max-width: 1200px) {
+  aside {
+    display: none;
+  }
+
+  .navBar-mobile {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 4rem;
+    bottom: 0;
+    padding: 0 1rem 0 4rem;
+    z-index: 10;
+    background: rgba(31, 31, 31, 0.5019607843);
+    backdrop-filter: blur(1px);
+    box-shadow: 4px 0px 8px #000000;
+  }
+  .navBar-mobile .perfil {
+    position: absolute;
+    left: 2rem;
+    bottom: 1rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+    border: 4px solid rgba(206, 206, 206, 0.5019607843);
+  }
+  .navBar-mobile .perfil img {
+    width: 100%;
+    object-fit: covers;
+  }
+  .navBar-mobile .buttons {
+    display: flex;
+    width: 75%;
+    height: 100%;
+  }
+  .navBar-mobile .buttons .buttonList {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .navBar-mobile .buttons .buttonList li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 4rem;
+    font-size: 2rem;
+  }
+  .navBar-mobile .buttons .buttonList li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 100%;
+  }
+  .navBar-mobile .buttons .buttonList li:hover, .navBar-mobile .buttons .buttonList li:focus, .navBar-mobile .buttons .buttonList li:focus-visible {
+    background: rgba(58, 58, 58, 0.5019607843);
+    border-bottom: 0.2rem solid rgba(206, 206, 206, 0.5019607843);
+  }
+  .navBar-mobile .buttons .buttonList li:hover ion-icon, .navBar-mobile .buttons .buttonList li:focus ion-icon, .navBar-mobile .buttons .buttonList li:focus-visible ion-icon {
+    color: #f2ce66;
+    filter: drop-shadow(-0.2rem 0.2rem 0rem #108944);
+    animation: shadow 0.3s;
+    transition: all 0.3s ease;
+  }
+
+  main {
+    padding-left: 0;
+  }
+  main .section-screen {
+    position: relative;
+    height: 100vh;
+    padding: 1rem 4rem;
+  }
+  main .txt-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 0rem;
+  }
+  main .txt-area h1 {
+    font-size: 4rem;
+  }
+  main .txt-area div {
+    gap: 2rem;
+  }
+  main .txt-area p {
+    font-size: 1.5rem;
+  }
+  main .txt-area ul fieldset {
+    font-size: 1.5rem;
+  }
+  main #welcome {
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 1rem;
+    gap: 0rem;
+  }
+  main #welcome .txt-welcome {
+    height: 50%;
+    text-align: center;
+    font-size: 4rem;
+  }
+  main #welcome .txt-welcome span::before {
+    left: 29.5rem;
+  }
+  main #welcome .contact {
+    width: 24rem;
+    height: 6rem;
+  }
+  main #welcome .contact a {
+    font-size: 2rem;
+  }
+  main #welcome .contact:focus, main #welcome .contact:focus-visible {
+    background: rgba(58, 58, 58, 0.5019607843);
+    box-shadow: 0px 0.3rem 0px #108944;
+  }
+  main #welcome .contact:focus a, main #welcome .contact:focus-visible a {
+    color: #f2ce66;
+  }
+  main #portfolio {
+    justify-content: center;
+  }
+  main #portfolio .web-sites {
+    align-items: center;
+    height: 70%;
+  }
+  main #about .txt-area {
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+  }
+  main #contact {
+    justify-content: center;
+  }
+  main #contact img {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  main {
+    background: red;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

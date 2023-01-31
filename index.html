@@ -10,22 +10,26 @@
       href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./src/assets/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./src/style/style.css" />
     <title>Carlos Cunha | Desenvolvedor Front End</title>
   </head>
   <body>
-    <aside id="aside" class="">
+    <aside id="aside" class="navBar-close">
       <nav class="navBar" id="navBar">
-        <div id="menuButtom" class="close">
+        <div id="menubutton" class="close">
           <ion-icon
             onclick="menuClose()"
-            class="buttom-close"
+            class="button-close"
             name="chevron-back"
           ></ion-icon>
           <ion-icon
             onclick="menuClose()"
-            class="buttom-open"
+            class="button-open"
             name="chevron-forward"
           ></ion-icon>
         </div>
@@ -33,7 +37,7 @@
           <img
             id="userImage"
             class="photo"
-            src="./assets/logo.png"
+            src="./src/assets/logo.png"
             alt="Foto do Carlos. Moreno lindo"
           />
           <div class="nameBio">
@@ -45,7 +49,7 @@
         </div>
 
         <div class="buttons">
-          <ul class="buttomList">
+          <ul class="buttonList">
             <li>
               <a href="#portfolio"
                 ><ion-icon name="grid"></ion-icon><span>Portfolio</span></a
@@ -85,8 +89,34 @@
         </div>
       </nav>
     </aside>
+
+    <nav class="navBar-mobile">
+      <div class="perfil">
+        <img
+          id="userImageMobile"
+          class="photo"
+          src="./assets/logo.png"
+          alt="Foto do Carlos"
+        />
+      </div>
+
+      <div class="buttons">
+        <ul class="buttonList">
+          <li>
+            <a href="#portfolio"><ion-icon name="grid"></ion-icon></a>
+          </li>
+          <li>
+            <a href="#about"><ion-icon name="reader"></ion-icon></a>
+          </li>
+          <li>
+            <a href="#contact"><ion-icon name="mail"></ion-icon></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
     <main id="main">
-      <section id="welcome" class="section-screenHome">
+      <section id="welcome" class="section-screen">
         <div class="txt-welcome">
           <h1>
             Olá,<br />
@@ -94,67 +124,204 @@
             Desenvolvedor web.
           </h1>
         </div>
-        <button class="contact">
+
+        <button class="contact button-contact">
           <a href="#contact">Contato</a>
         </button>
       </section>
+
       <section id="portfolio" class="section-screen">
         <div class="txt-area">
           <h1><span>M</span>eu <span>P</span>ortifólio</h1>
-          <div>
+          <div class="txt-area">
             <p>
               Aqui está a minha galeria de alguns sites criados por mim,
               projetos realizados em aulas ou como estudo.
             </p>
-            <button>
-              <a href="#">Veja mais</a>
+            <button class="button">
+              <a href="https://github.com/carloscunha611" target="_blank"
+                >Veja mais</a
+              >
             </button>
           </div>
         </div>
         <div class="web-sites">
           <ul class="site-list">
             <li class="active">
-              <a href="#">
-                <img src="./assets/icons/ihuul.png" alt="ihuul" />
-              </a>
-            </li>
-            <li class="active">
-              <a href="#">
-                <img src="./assets/icons/bs.png" alt="" />
-              </a>
-            </li>
-            <li class="active">
-              <a href="#">
+              <div class="details">
                 <img
-                  src="./assets/icons/projectFalcon.png"
-                  alt="Project Falcon"
+                  class="web-site-icon"
+                  src="./src/assets/icons/icon-ihuul.png"
+                  alt="ihuul"
                 />
-              </a>
+
+                <div class="moldura">
+                  <img
+                    src="./src/assets/icons/gifs/ihuul-gif.gif"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+
+                <p class="web-site-name">IHUUL</p>
+              </div>
+              <button class="web-site-button">
+                <a href="#" target="_blank">visitar site</a>
+              </button>
             </li>
             <li class="active">
-              <a href="#">
-                <img src="./assets/icons/FoxFoxGo.png" alt="FoxFoxGo!" />
-              </a>
+              <div class="details">
+                <img
+                  class="web-site-icon"
+                  src="./src/assets/icons/halo-mcc.png"
+                  alt="ihuul"
+                />
+
+                <div class="moldura">
+                  <img
+                    src="./src/assets/icons/gifs/halo-gif.gif"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+
+                <p class="web-site-name">Master Chief Collection</p>
+              </div>
+              <button class="web-site-button">
+                <a href="#" target="_blank">visitar site</a>
+              </button>
             </li>
             <li class="active">
-              <a href="#">
-                <img src="./assets/icons/habits.png" alt="habits" />
-              </a>
+              <div class="details">
+                <img
+                  class="web-site-icon"
+                  src="./src/assets/icons/bs.png"
+                  alt="beautysalon."
+                />
+
+                <div class="moldura">
+                  <img
+                    src="./src/assets/icons/gifs/beautysalon-gif.gif"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+
+                <p class="web-site-name">beautysalon.</p>
+              </div>
+              <button class="web-site-button">
+                <a href="#" target="_blank">visitar site</a>
+              </button>
             </li>
             <li class="active">
-              <a href="#">
-                <img src="./assets/icons/marioBros.png" alt="" />
-              </a>
+              <div class="details">
+                <img
+                  class="web-site-icon"
+                  src="./src/assets/icons/projectFalcon.png"
+                  alt="ihuul"
+                />
+
+                <div class="moldura">
+                  <img
+                    src="./src/assets/icons/gifs/projectFalcon-gif.gif"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+
+                <p class="web-site-name">Project Falcon</p>
+              </div>
+              <button class="web-site-button">
+                <a href="#" target="_blank">visitar site</a>
+              </button>
             </li>
             <li class="active">
-              <a href="#">
-                <img src="./assets/icons/myTrovoSpace.png" alt="" />
-              </a>
+              <div class="details">
+                <img
+                  class="web-site-icon"
+                  src="./src/assets/icons/myTrovoSpace.png"
+                  alt="ihuul"
+                />
+
+                <div class="moldura">
+                  <img
+                    src="./src/assets/icons/gifs/myTrovoSpace-gif.gif"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+
+                <p class="web-site-name">My Trovo Space</p>
+              </div>
+              <button class="web-site-button">
+                <a href="#" target="_blank">visitar site</a>
+              </button>
             </li>
             <li class="active">
-              <a href="#">
-                <img src="./assets/icons/vaultCard.png" alt="" />
-              </a>
+              <div class="details">
+                <img
+                  class="web-site-icon"
+                  src="./src/assets/icons/FoxFoxGo.png"
+                  alt="ihuul"
+                />
+
+                <div class="moldura">
+                  <img
+                    src="./src/assets/icons/gifs/foxFoxGo-gif.gif"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+
+                <p class="web-site-name">FoxFoxGo!</p>
+              </div>
+              <button class="web-site-button">
+                <a href="#" target="_blank">visitar site</a>
+              </button>
+            </li>
+            <li class="active">
+              <div class="details">
+                <img
+                  class="web-site-icon"
+                  src="./src/assets/icons/vaultCard.png"
+                  alt="ihuul"
+                />
+
+                <div class="moldura">
+                  <img
+                    src="./src/assets/icons/gifs/cardVaut-gif.gif"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+
+                <p class="web-site-name">FoxFoxGo!</p>
+              </div>
+              <button class="web-site-button">
+                <a href="#" target="_blank">visitar site</a>
+              </button>
+            </li>
+            <li class="active">
+              <div class="details">
+                <img
+                  class="web-site-icon"
+                  src="./src/assets/icons/habits.png"
+                  alt="ihuul"
+                />
+
+                <div class="moldura">
+                  <img
+                    src="./src/assets/icons/gifs/habits-gif.gif"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+
+                <p class="web-site-name">FoxFoxGo!</p>
+              </div>
+              <button class="web-site-button">
+                <a href="#" target="_blank">visitar site</a>
+              </button>
             </li>
           </ul>
         </div>
@@ -163,52 +330,72 @@
       <section id="about" class="section-screen">
         <div class="txt-area">
           <h1><span>S</span>obre</h1>
-          <ul>
-            <fieldset>
-              <legend>Formação:</legend>
-              <li>Análise e desenvolvimento de sistemas</li>
-            </fieldset>
-            <fieldset>
-              <legend>Conhecimentos:</legend>
-              <li>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain-wordmark.svg"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bulma/bulma-plain.svg"
-                />
-              </li>
-            </fieldset>
-          </ul>
+          <div class="informations">
+            <div class="techs">
+              <ul>
+                <li class="stack">
+                  <span>HTML</span>
+
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"
+                  />
+                </li>
+                <li class="stack">
+                  <span>css</span>
+
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg"
+                  />
+                </li>
+                <li class="stack">
+                  <span>javascript</span>
+
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
+                  />
+                </li>
+                <li class="stack">
+                  <span>sass</span>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
+                  />
+                </li>
+                <li class="stack">
+                  <span>bootstrap</span>
+
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg"
+                  />
+                </li>
+                <li class="stack">
+                  <span>bulma</span>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bulma/bulma-plain.svg"
+                  />
+                </li>
+              </ul>
+            </div>
+            <div class="infos">
+              <ul>
+                <li><span>Ensino:</span> Superior Completo</li>
+                <li>
+                  <span>Curso:</span> Analise e Desenvolvimento de Sistemas
+                </li>
+                <li>
+                  <span>Outros Cursos:</span> Fullstack Proficional JavaScript
+                  (oneBitCode)
+                </li>
+                <li><span>Experiencia:</span> Projetos autorais</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
       <section id="contact" class="section-screen">
         <div class="txt-area">
           <h1><span>C</span>ontato</h1>
-          <div>
+          <div class="form">
             <form
               action="https://formsubmit.co/24834d32455b39aab58faf456c026c5d"
               method="POST"
@@ -241,9 +428,11 @@
                 placeholder="Digite sua mensagem aqui."
               ></textarea>
               <input type="hidden" name="_captcha" value="false" />
-              <button type="submit" data-button>Enviar</button>
+              <button class="contact button-contact" type="submit" data-button>
+                Enviar
+              </button>
             </form>
-            <img src="./assets/@.png" alt="email" />
+            <img src="./src/assets/@.png" alt="email" />
           </div>
         </div>
       </section>
@@ -259,7 +448,6 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
 
-    <script src="./JavaScript/main.js"></script>
-    <script src="./JavaScript/form.js"></script>
+    <script src="./src/JavaScript/main.js"></script>
   </body>
 </html>
