@@ -614,10 +614,10 @@ main #contact {
   align-items: center;
   justify-content: center;
 }
-main #contact .form {
+main #contact .formu {
   width: 100%;
 }
-main #contact .form form {
+main #contact .formu form {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -626,28 +626,29 @@ main #contact .form form {
   width: 32rem;
   height: 32rem;
 }
-main #contact .form form .success {
+main #contact .formu form .success {
   font-size: 1rem;
   color: #f2ce66;
 }
-main #contact .form form .success span {
+main #contact .formu form .success span.success_ {
+  filter: none;
   color: #108944;
 }
-main #contact .form form .error {
+main #contact .formu form .error {
   font-size: 1rem;
   color: red;
 }
-main #contact .form form label {
+main #contact .formu form label {
   font-size: 1.5rem;
 }
-main #contact .form form input {
+main #contact .formu form input {
   background: rgba(31, 31, 31, 0.5019607843);
   border-radius: 0.3rem;
   padding-left: 1rem;
   border: none;
   height: 2rem;
 }
-main #contact .form form textarea {
+main #contact .formu form textarea {
   background: rgba(31, 31, 31, 0.5019607843);
   border-radius: 0.3rem;
   padding: 1rem;
@@ -659,15 +660,15 @@ main #contact .form form textarea {
   min-width: 10rem;
   max-width: 32rem;
 }
-main #contact .form form button {
+main #contact .formu form button {
   font-size: 1.5rem;
   width: 10rem;
   cursor: pointer;
 }
-main #contact .form form :focus-visible {
+main #contact .formu form :focus-visible {
   outline: #f2ce66 solid 1px;
 }
-main #contact .form img {
+main #contact .formu img {
   width: 50%;
   opacity: 0.5;
 }
@@ -997,26 +998,26 @@ main #contact .form img {
     height: 90vh;
     width: 100%;
   }
-  main #contact .txt-area .form {
+  main #contact .txt-area .formu {
     height: 100%;
   }
-  main #contact .txt-area .form form {
+  main #contact .txt-area .formu form {
     width: 100%;
     height: 100%;
   }
-  main #contact .txt-area .form form input {
+  main #contact .txt-area .formu form input {
     width: 100%;
     height: 4rem;
   }
-  main #contact .txt-area .form form textarea {
+  main #contact .txt-area .formu form textarea {
     width: 100%;
     min-width: 8rem;
     max-width: 100%;
   }
-  main #contact .txt-area .form img {
+  main #contact .txt-area .formu img {
     display: none;
   }
-  main #contact .txt-area .form button {
+  main #contact .txt-area .formu button {
     margin-top: 1.5rem;
     margin-left: 0rem;
   }

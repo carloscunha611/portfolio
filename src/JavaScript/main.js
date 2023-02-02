@@ -80,26 +80,45 @@ class FormSubmit {
 }
 
 const formComplete = `
-              <label for="name">Nome</label>
-              <input id="name" type="text" name="name" required />
+<label for="name">Nome</label>
+<input
+  required
+  id="name"
+  type="text"
+  name="name"
+  autocomplete="off"
+  placeholder="Digite seu nome aqui."
+/>
 
-              <label for="email">E-mail</label>
-              <input id="email" type="email" name="email" required />
+<label for="email">E-mail</label>
+<input
+  required
+  id="email"
+  type="email"
+  name="email"
+  autocomplete="off"
+  placeholder="Digite seu e-mail para contato."
+/>
 
-              <label for="mensage">Mensagem</label>
-              <textarea id="mensage" name="mensage"></textarea>
-
-              <input type="hidden" name="_captcha" value="false" />
-              
-              <button class="button-contact" type="submit" data-button>Enviar</button>`
+<label for="mensage">Mensagem</label>
+<textarea
+  required
+  id="mensage"
+  name="mensage"
+  placeholder="Digite sua mensagem aqui."
+></textarea>
+<button class="contact button-contact" type="submit" data-button>
+  Enviar
+</button>
+<input type="hidden" name="_captcha" value="false" />`
 
 const formSubmit = new FormSubmit({
   form: '[data-form]',
   button: '[data-button]',
-  success: `<h1 class='success'>Mensagem enviada com <span>sucesso!</span></h1>
+  success: `<h1 class='success' data-aos="fade-down">Mensagem enviada com <span class= 'success_'>sucesso</span>!</h1>
   ${formComplete}
   `,
-  error: `"<h1 class='error'>Não foi possível enviar sua mensagem.</h1>
+  error: `"<h1 class='error' data-aos="fade-down">Não foi possível enviar sua mensagem.</h1>
   ${formComplete}
   `
 })

@@ -432,43 +432,44 @@
       <section id="contact" class="section-screen">
         <div class="txt-area">
           <h1 data-aos="fade-down"><span>C</span>ontato</h1>
-          <div class="form">
+          <div class="formu">
             <form
-              action="https://carloscunha611.github.io/portifolio/"
+              action="https://formsubmit.co/ajax/carlosdacunha611@gmail.com"
               method="POST"
               data-form
               data-aos="fade-up-right"
             >
               <label for="name">Nome</label>
               <input
+                required
                 id="name"
                 type="text"
                 name="name"
                 autocomplete="off"
                 placeholder="Digite seu nome aqui."
-                required
               />
 
               <label for="email">E-mail</label>
               <input
+                required
                 id="email"
                 type="email"
                 name="email"
                 autocomplete="off"
-                placeholder="Digite seu e-mail aqui."
-                required
+                placeholder="Digite seu e-mail para contato."
               />
 
               <label for="mensage">Mensagem</label>
               <textarea
+                required
                 id="mensage"
                 name="mensage"
                 placeholder="Digite sua mensagem aqui."
               ></textarea>
-              <input type="hidden" name="_captcha" value="false" />
               <button class="contact button-contact" type="submit" data-button>
                 Enviar
               </button>
+              <input type="hidden" name="_captcha" value="false" />
             </form>
             <img src="./src/assets/@.png" alt="email" />
           </div>
