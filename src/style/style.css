@@ -24,6 +24,7 @@ body {
   min-width: 20rem;
   overflow-y: scroll;
   overflow-x: hidden;
+  transition: all ease-in-out 0.3s;
 }
 
 .navBar-mobile {
@@ -259,7 +260,7 @@ main .txt-area div {
   width: 100%;
 }
 main .txt-area div p {
-  width: 90%;
+  width: 100%;
   text-align: justify;
   font-size: 1.5rem;
 }
@@ -398,7 +399,12 @@ main #portfolio {
   gap: 2rem;
 }
 main #portfolio div {
+  text-align: left;
+  width: 100%;
   gap: 2rem;
+}
+main #portfolio div p {
+  text-align: center;
 }
 main #portfolio .web-sites {
   display: flex;
@@ -435,7 +441,6 @@ main #portfolio .web-sites .site-list li.active .details {
   border-radius: 0.5rem;
   border: 2px solid rgba(206, 206, 206, 0.5019607843);
   transition: 0.5s ease-out;
-  overflow: visible;
   gap: 2rem;
 }
 main #portfolio .web-sites .site-list li.active .details .web-site-icon {
@@ -504,7 +509,6 @@ main #portfolio .web-sites .site-list li.active:nth-child(even):hover .details .
   border-color: #108944;
 }
 main #portfolio .web-sites .site-list li.active:nth-child(even):hover .web-site-button {
-  transform: translate(0%, 330%);
   border-color: #108944;
   opacity: 1;
 }
@@ -725,6 +729,30 @@ main #contact .form img {
     transform: translateY(-8px);
   }
 }
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
 @media (max-width: 1200px) {
   aside {
     display: none;
@@ -799,8 +827,10 @@ main #contact .form img {
   }
   main .section-screen {
     position: relative;
-    height: 100vh;
-    padding: 1rem 4rem;
+    height: fit-content;
+    min-height: fit-content;
+    padding: 1rem 2rem;
+    padding-bottom: 4rem;
   }
   main .txt-area {
     display: flex;
@@ -810,7 +840,7 @@ main #contact .form img {
     padding-right: 0rem;
   }
   main .txt-area h1 {
-    font-size: 4rem;
+    font-size: 2rem;
   }
   main .txt-area div {
     gap: 2rem;
@@ -825,20 +855,22 @@ main #contact .form img {
     align-items: center;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
     padding: 0rem 1rem;
-    gap: 0rem;
+    gap: 2rem;
   }
   main #welcome .txt-welcome {
-    height: 50%;
+    height: 40%;
     text-align: center;
-    font-size: 4rem;
+    font-size: 1.7rem;
   }
   main #welcome .txt-welcome span::before {
     left: 29.5rem;
   }
   main #welcome .contact {
-    width: 24rem;
-    height: 6rem;
+    width: 16rem;
+    height: 4rem;
+    margin-left: 0rem;
   }
   main #welcome .contact a {
     font-size: 2rem;
@@ -851,27 +883,129 @@ main #contact .form img {
     color: #f2ce66;
   }
   main #portfolio {
-    justify-content: center;
+    min-height: fit-content;
+    padding-bottom: 4rem;
   }
-  main #portfolio .web-sites {
-    align-items: center;
-    height: 70%;
+  main #portfolio div {
+    gap: 1rem;
   }
-  main #about .txt-area {
-    gap: 5rem;
-    justify-content: center;
-    align-items: center;
+  main #portfolio div p {
+    text-align: justify;
+    font-size: 1rem;
   }
-  main #contact {
-    justify-content: center;
-  }
-  main #contact img {
+  main #portfolio div .button {
     display: none;
   }
-}
-@media (max-width: 800px) {
-  main {
-    background: red;
+  main #portfolio .web-sites {
+    margin-top: 1rem;
+    height: fit-content;
+  }
+  main #portfolio .web-sites .site-list {
+    align-items: flex-start;
+    gap: 4rem;
+  }
+  main #portfolio .web-sites .site-list li.active {
+    width: 4rem;
+    height: 4rem;
+  }
+  main #portfolio .web-sites .site-list li.active .details {
+    align-items: center;
+    gap: 0rem;
+  }
+  main #portfolio .web-sites .site-list li.active .details .web-site-icon {
+    display: none;
+  }
+  main #portfolio .web-sites .site-list li.active .details .moldura {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
+  }
+  main #portfolio .web-sites .site-list li.active .details .web-site-name {
+    width: 6rem;
+    position: absolute;
+    top: 4rem;
+    text-align: center;
+  }
+  main #portfolio .web-sites .site-list li.active .web-site-button {
+    opacity: 1;
+    transform: translate(0);
+    width: 4rem;
+    height: 4rem;
+    padding: 0;
+    font-size: 0;
+    backdrop-filter: none;
+    background: none;
+    border: none;
+  }
+  main #portfolio .web-sites .site-list li.active .web-site-button a {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+  }
+  main #portfolio .web-sites .site-list li.active:hover .web-site-button {
+    transform: translate(0);
+  }
+  main #about {
+    height: fit-content;
+  }
+  main #about .informations {
+    flex-direction: column-reverse;
+    height: 100%;
+    margin-top: 2rem;
+  }
+  main #about .informations ul {
+    gap: 2rem;
+  }
+  main #about .informations .infos {
+    width: 100%;
+    padding: 1rem;
+  }
+  main #about .informations .techs {
+    width: 100%;
+  }
+  main #about .informations .techs ul {
+    gap: 2rem;
+  }
+  main #about .informations .techs .stack {
+    height: 6rem;
+    width: 6rem;
+  }
+  main #about .informations .techs .stack span {
+    font-size: 0.8rem;
+  }
+  main #about .informations .techs .stack img {
+    width: 2.5rem;
+  }
+  main #contact {
+    height: fit-content;
+  }
+  main #contact .txt-area {
+    height: 90vh;
+    width: 100%;
+  }
+  main #contact .txt-area .form {
+    height: 100%;
+  }
+  main #contact .txt-area .form form {
+    width: 100%;
+    height: 100%;
+  }
+  main #contact .txt-area .form form input {
+    width: 100%;
+    height: 4rem;
+  }
+  main #contact .txt-area .form form textarea {
+    width: 100%;
+    min-width: 8rem;
+    max-width: 100%;
+  }
+  main #contact .txt-area .form img {
+    display: none;
+  }
+  main #contact .txt-area .form button {
+    margin-top: 1.5rem;
+    margin-left: 0rem;
   }
 }
 

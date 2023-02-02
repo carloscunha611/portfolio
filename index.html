@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,7 +20,7 @@
     <title>Carlos Cunha | Desenvolvedor Front End</title>
   </head>
   <body>
-    <aside id="aside" class="navBar-close">
+    <aside data-aos="fade-right" id="aside" class="navBar-close">
       <nav class="navBar" id="navBar">
         <div id="menubutton" class="close">
           <ion-icon
@@ -117,7 +118,7 @@
 
     <main id="main">
       <section id="welcome" class="section-screen">
-        <div class="txt-welcome">
+        <div data-aos="fade-down" class="txt-welcome">
           <h1>
             Olá,<br />
             eu sou o <span>C</span>arlos<br />
@@ -125,18 +126,18 @@
           </h1>
         </div>
 
-        <button class="contact button-contact">
+        <button data-aos="fade-up" class="contact button-contact">
           <a href="#contact">Contato</a>
         </button>
       </section>
 
       <section id="portfolio" class="section-screen">
-        <div class="txt-area">
+        <div data-aos="fade-right" class="txt-area">
           <h1><span>M</span>eu <span>P</span>ortifólio</h1>
           <div class="txt-area">
             <p>
-              Aqui está a minha galeria de alguns sites criados por mim,
-              projetos realizados em aulas ou como estudo.
+              Aqui está a minha galeria de alguns sites criados por mim
+              recentemente. Projetos realizados em aulas ou como estudo.
             </p>
             <button class="button">
               <a href="https://github.com/carloscunha611" target="_blank"
@@ -151,22 +152,26 @@
               <div class="details">
                 <img
                   class="web-site-icon"
-                  src="./src/assets/icons/icon-ihuul.png"
-                  alt="ihuul"
+                  src="./src/assets/icons/ihuul.png"
+                  alt="icone do ihuul"
                 />
 
                 <div class="moldura">
                   <img
                     src="./src/assets/icons/gifs/ihuul-gif.gif"
-                    alt=""
-                    srcset=""
+                    alt="ihuul"
+                    srcset="imagem do ihuul"
                   />
                 </div>
 
-                <p class="web-site-name">IHUUL</p>
+                <p class="web-site-name">ihuul</p>
               </div>
               <button class="web-site-button">
-                <a href="#" target="_blank">visitar site</a>
+                <a
+                  href="https://carloscunha611.github.io/ihuul/"
+                  target="_blank"
+                  >visitar site</a
+                >
               </button>
             </li>
             <li class="active">
@@ -174,21 +179,25 @@
                 <img
                   class="web-site-icon"
                   src="./src/assets/icons/halo-mcc.png"
-                  alt="ihuul"
+                  alt="icone do site do halo master chief collection"
                 />
 
                 <div class="moldura">
                   <img
                     src="./src/assets/icons/gifs/halo-gif.gif"
-                    alt=""
-                    srcset=""
+                    alt="Master Chief Collection"
+                    srcset="imagem do site do halo master chief collection"
                   />
                 </div>
 
                 <p class="web-site-name">Master Chief Collection</p>
               </div>
               <button class="web-site-button">
-                <a href="#" target="_blank">visitar site</a>
+                <a
+                  href="https://carloscunha611.github.io/halo-masterChiefCollection/"
+                  target="_blank"
+                  >visitar site</a
+                >
               </button>
             </li>
             <li class="active">
@@ -196,13 +205,13 @@
                 <img
                   class="web-site-icon"
                   src="./src/assets/icons/bs.png"
-                  alt="beautysalon."
+                  alt="icone do site beautysalon."
                 />
 
                 <div class="moldura">
                   <img
                     src="./src/assets/icons/gifs/beautysalon-gif.gif"
-                    alt=""
+                    alt="imagem do site beautysalon."
                     srcset=""
                   />
                 </div>
@@ -210,7 +219,11 @@
                 <p class="web-site-name">beautysalon.</p>
               </div>
               <button class="web-site-button">
-                <a href="#" target="_blank">visitar site</a>
+                <a
+                  href="https://carloscunha611.github.io/beautysalon/"
+                  target="_blank"
+                  >visitar site</a
+                >
               </button>
             </li>
             <li class="active">
@@ -218,13 +231,13 @@
                 <img
                   class="web-site-icon"
                   src="./src/assets/icons/projectFalcon.png"
-                  alt="ihuul"
+                  alt="icone do project falcon"
                 />
 
                 <div class="moldura">
                   <img
                     src="./src/assets/icons/gifs/projectFalcon-gif.gif"
-                    alt=""
+                    alt="imagem do site Project Falcon"
                     srcset=""
                   />
                 </div>
@@ -232,7 +245,11 @@
                 <p class="web-site-name">Project Falcon</p>
               </div>
               <button class="web-site-button">
-                <a href="#" target="_blank">visitar site</a>
+                <a
+                  href="https://carloscunha611.github.io/oneBitX/"
+                  target="_blank"
+                  >visitar site</a
+                >
               </button>
             </li>
             <li class="active">
@@ -240,13 +257,13 @@
                 <img
                   class="web-site-icon"
                   src="./src/assets/icons/myTrovoSpace.png"
-                  alt="ihuul"
+                  alt="icone do my trovo space"
                 />
 
                 <div class="moldura">
                   <img
                     src="./src/assets/icons/gifs/myTrovoSpace-gif.gif"
-                    alt=""
+                    alt="imagem do site my trovo space"
                     srcset=""
                   />
                 </div>
@@ -254,7 +271,11 @@
                 <p class="web-site-name">My Trovo Space</p>
               </div>
               <button class="web-site-button">
-                <a href="#" target="_blank">visitar site</a>
+                <a
+                  href="https://carloscunha611.github.io/MyTrovoSpace/"
+                  target="_blank"
+                  >visitar site</a
+                >
               </button>
             </li>
             <li class="active">
@@ -262,21 +283,25 @@
                 <img
                   class="web-site-icon"
                   src="./src/assets/icons/FoxFoxGo.png"
-                  alt="ihuul"
+                  alt="icone do site foxfoxgo"
                 />
 
                 <div class="moldura">
                   <img
                     src="./src/assets/icons/gifs/foxFoxGo-gif.gif"
-                    alt=""
-                    srcset=""
+                    alt="FoxFoxGo!"
+                    srcset="imagem do site foxfoxgo"
                   />
                 </div>
 
                 <p class="web-site-name">FoxFoxGo!</p>
               </div>
               <button class="web-site-button">
-                <a href="#" target="_blank">visitar site</a>
+                <a
+                  href="https://carloscunha611.github.io/foxfoxgo/"
+                  target="_blank"
+                  >visitar site</a
+                >
               </button>
             </li>
             <li class="active">
@@ -284,21 +309,25 @@
                 <img
                   class="web-site-icon"
                   src="./src/assets/icons/vaultCard.png"
-                  alt="ihuul"
+                  alt="icone do site vault card"
                 />
 
                 <div class="moldura">
                   <img
                     src="./src/assets/icons/gifs/cardVaut-gif.gif"
-                    alt=""
-                    srcset=""
+                    alt="Vault Card"
+                    srcset="imagem do site vault card"
                   />
                 </div>
 
-                <p class="web-site-name">FoxFoxGo!</p>
+                <p class="web-site-name">Vault Card</p>
               </div>
               <button class="web-site-button">
-                <a href="#" target="_blank">visitar site</a>
+                <a
+                  href="https://carloscunha611.github.io/VaultTecCard/"
+                  target="_blank"
+                  >visitar site</a
+                >
               </button>
             </li>
             <li class="active">
@@ -306,21 +335,25 @@
                 <img
                   class="web-site-icon"
                   src="./src/assets/icons/habits.png"
-                  alt="ihuul"
+                  alt="icone do site habits"
                 />
 
                 <div class="moldura">
                   <img
                     src="./src/assets/icons/gifs/habits-gif.gif"
-                    alt=""
+                    alt="imagem do site habits"
                     srcset=""
                   />
                 </div>
 
-                <p class="web-site-name">FoxFoxGo!</p>
+                <p class="web-site-name">habits</p>
               </div>
               <button class="web-site-button">
-                <a href="#" target="_blank">visitar site</a>
+                <a
+                  href="https://carloscunha611.github.io/habits/"
+                  target="_blank"
+                  >visitar site</a
+                >
               </button>
             </li>
           </ul>
@@ -331,7 +364,11 @@
         <div class="txt-area">
           <h1><span>S</span>obre</h1>
           <div class="informations">
-            <div class="techs">
+            <div
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom"
+              class="techs"
+            >
               <ul>
                 <li class="stack">
                   <span>HTML</span>
@@ -375,7 +412,7 @@
                 </li>
               </ul>
             </div>
-            <div class="infos">
+            <div data-aos="fade-left" class="infos">
               <ul>
                 <li><span>Ensino:</span> Superior Completo</li>
                 <li>
@@ -394,12 +431,13 @@
 
       <section id="contact" class="section-screen">
         <div class="txt-area">
-          <h1><span>C</span>ontato</h1>
+          <h1 data-aos="fade-down"><span>C</span>ontato</h1>
           <div class="form">
             <form
               action="https://formsubmit.co/24834d32455b39aab58faf456c026c5d"
               method="POST"
               data-form
+              data-aos="fade-up-right"
             >
               <label for="name">Nome</label>
               <input
@@ -447,6 +485,11 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init()
+    </script>
 
     <script src="./src/JavaScript/main.js"></script>
   </body>
