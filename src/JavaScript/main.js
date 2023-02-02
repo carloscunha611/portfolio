@@ -96,7 +96,7 @@ const formComplete = `
 const formSubmit = new FormSubmit({
   form: '[data-form]',
   button: '[data-button]',
-  success: `<h1 class='success'>Mensagem enviada com sucesso!</h1>
+  success: `<h1 class='success'>Mensagem enviada com <span>sucesso!</span></h1>
   ${formComplete}
   `,
   error: `"<h1 class='error'>Não foi possível enviar sua mensagem.</h1>
