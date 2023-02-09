@@ -20,11 +20,7 @@
     <title>Carlos Cunha | Desenvolvedor Front End</title>
   </head>
   <body>
-    <!--  <div class="loading">
-      <h1>Carregando...</h1>
-    </div> -->
-
-    <aside data-aos="fade-right" id="aside" class="navBar-close">
+    <aside id="aside" class="navBar-close">
       <nav class="navBar" id="navBar">
         <div id="menubutton" class="close">
           <ion-icon
@@ -122,8 +118,8 @@
 
     <main id="main">
       <section id="welcome" class="section-screen">
-        <div data-aos="fade-down" class="txt-welcome">
-          <h1>
+        <div class="txt-welcome">
+          <h1 class="main-title">
             Olá,<br />
             eu sou o <span>C</span>arlos<br />
             Desenvolvedor web.
@@ -373,7 +369,7 @@
               data-aos-anchor-placement="top-bottom"
               class="techs"
             >
-              <ul>
+              <ul class="stack-list">
                 <li class="stack">
                   <span>HTML</span>
 
@@ -482,6 +478,9 @@
     </main>
 
     <!-- scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./src/JavaScript/main.js"></script>
+    <script></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -490,12 +489,5 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init()
-    </script>
-
-    <script src="./src/JavaScript/main.js"></script>
   </body>
 </html>

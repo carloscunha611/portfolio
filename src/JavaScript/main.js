@@ -1,3 +1,29 @@
+AOS.init()
+
+function showLoading() {
+  const div = document.createElement('div')
+  div.classList.add('loading')
+
+  const label = document.createElement('label')
+  label.innerHTML = 'Carregando...'
+
+  div.appendChild(label)
+
+  document.body.appendChild(div)
+
+  const portifolio = document.querySelectorAll('.active')
+  if (portifolio) {
+    hideLoading()
+  }
+}
+showLoading()
+function hideLoading() {
+  const loading = document.getElementsByClassName('loading')
+  if (loading.length) {
+    loading[0].remove()
+  }
+}
+
 /* User infos */
 async function getGitHubProfileInfos() {
   const url = `https://api.github.com/users/carloscunha611`
@@ -123,29 +149,3 @@ const formSubmit = new FormSubmit({
   `
 })
 formSubmit.init()
-
-function showLoading() {
-  const div = document.createElement('div')
-  div.classList.add('loading')
-
-  const label = document.createElement('label')
-  label.innerHTML = 'Carregando...'
-
-  div.appendChild(label)
-
-  document.body.appendChild(div)
-
-  const content = document.querySelectorAll('#main')
-  const portifolio = document.querySelectorAll('.site-list')
-  if (content.length || portifolio.length > 1) {
-    return hideLoading()
-  }
-}
-showLoading()
-
-function hideLoading() {
-  const loading = document.getElementsByClassName('loading')
-  if (loading.length) {
-    loading[0].remove()
-  }
-}

@@ -17,6 +17,17 @@
   text-decoration: none;
 }
 
+body .loading,
+body .contact,
+body .web-sites,
+body .active,
+body .stack,
+body #contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   align-content: center;
   background: url("../../src/assets/bgimgH.jpg") center/cover;
@@ -25,9 +36,6 @@ body {
 }
 
 .loading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: fixed;
   height: 100%;
   width: 100%;
@@ -59,7 +67,7 @@ aside {
   backdrop-filter: blur(1px);
   box-shadow: 4px 0px 8px #000000;
   transition: all 0.3s ease-in-out;
-  /* z-index: 1994; */
+  z-index: 1994;
 }
 aside .navBar {
   flex-direction: column;
@@ -369,32 +377,8 @@ main #welcome .txt-welcome {
   user-select: none;
   filter: drop-shadow(-0.2rem 0 0 #108944);
 }
-main #welcome .txt-welcome span::before {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(90deg, #f2ce66, #108944);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0rem 0 0 transparent);
-  content: "C";
-  position: absolute;
-  font-family: "Rubik Glitch", sans-serif;
-  font-size: 5rem;
-  top: 8rem;
-  left: 25.5rem;
-  transition: all 0.3s ease-in-out;
-  z-index: -1;
-  opacity: 0;
-}
-main #welcome .txt-welcome span:hover::before, main #welcome .txt-welcome span:focus::before {
-  opacity: 1;
-}
 main #welcome .contact {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 16rem;
   height: 4rem;
   margin-left: 2rem;
@@ -421,9 +405,6 @@ main #portfolio div p {
   text-align: center;
 }
 main #portfolio .web-sites {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 100vh;
 }
@@ -438,9 +419,6 @@ main #portfolio .web-sites .site-list {
   gap: 2rem;
 }
 main #portfolio .web-sites .site-list li.active {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 12rem;
   height: 16rem;
 }
@@ -565,7 +543,7 @@ main #about .informations .techs {
   height: 100%;
   width: 50%;
 }
-main #about .informations .techs ul {
+main #about .informations .techs .stack-list {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
@@ -574,9 +552,6 @@ main #about .informations .techs ul {
 }
 main #about .informations .techs .stack {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
   height: 8rem;
   width: 8rem;
@@ -625,11 +600,6 @@ main #about .informations .techs .stack:hover:nth-child(odd)::before {
 }
 main #about .informations .techs .stack:hover:nth-child(even)::before {
   background: #108944;
-}
-main #contact {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 main #contact .formu {
   width: 100%;
