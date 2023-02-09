@@ -135,8 +135,9 @@ function showLoading() {
 
   document.body.appendChild(div)
 
-  const content = document.querySelectorAll('#portfolio')
-  if (content.length) {
+  const content = document.querySelectorAll('#main')
+  const portifolio = document.querySelectorAll('.site-list')
+  if (content.length || portifolio.length > 1) {
     return hideLoading()
   }
 }
