@@ -123,3 +123,28 @@ const formSubmit = new FormSubmit({
   `
 })
 formSubmit.init()
+
+function showLoading() {
+  const div = document.createElement('div')
+  div.classList.add('loading')
+
+  const label = document.createElement('label')
+  label.innerHTML = 'Carregando...'
+
+  div.appendChild(label)
+
+  document.body.appendChild(div)
+
+  const content = document.querySelectorAll('#portfolio')
+  if (content.length) {
+    return hideLoading()
+  }
+}
+showLoading()
+
+function hideLoading() {
+  const loading = document.getElementsByClassName('loading')
+  if (loading.length) {
+    loading[0].remove()
+  }
+}

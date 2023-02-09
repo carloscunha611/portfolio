@@ -24,6 +24,23 @@ body {
   transition: all ease-in-out 0.3s;
 }
 
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(31, 31, 31, 0.5019607843);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  overflow: hidden;
+}
+.loading label {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
 .navBar-mobile {
   display: none;
 }
@@ -42,7 +59,7 @@ aside {
   backdrop-filter: blur(1px);
   box-shadow: 4px 0px 8px #000000;
   transition: all 0.3s ease-in-out;
-  z-index: 1994;
+  /* z-index: 1994; */
 }
 aside .navBar {
   flex-direction: column;
@@ -757,6 +774,7 @@ main #contact .formu img {
     opacity: 1;
   }
 }
+@keyframes Loading {}
 @media (max-width: 1200px) {
   aside {
     display: none;
