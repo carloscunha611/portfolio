@@ -147,4 +147,3 @@ const formSubmit = new FormSubmit({
   `
 })
 formSubmit.init()
-AOS.init()
