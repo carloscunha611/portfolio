@@ -1,5 +1,3 @@
-AOS.init()
-
 function showLoading() {
   const div = document.createElement('div')
   div.classList.add('loading')
@@ -149,3 +147,4 @@ const formSubmit = new FormSubmit({
   `
 })
 formSubmit.init()
+AOS.init()
