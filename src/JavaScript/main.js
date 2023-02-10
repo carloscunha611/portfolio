@@ -30,19 +30,12 @@ async function getGitHubProfileInfos() {
     .then(response => response.json())
     .then(data => {
       userImage.src = data.avatar_url
-      /* userName.textContent = data.name */
       userBio.textContent = data.bio
       userImageMobile.src = data.avatar_url
     })
 }
 
 getGitHubProfileInfos()
-
-/* Menu */
-const menuClose = e => {
-  document.getElementById('menubutton').classList.toggle('close')
-  document.getElementById('aside').classList.toggle('navBar-close')
-}
 
 /* Form e-mail */
 class FormSubmit {
@@ -147,3 +140,48 @@ const formSubmit = new FormSubmit({
   `
 })
 formSubmit.init()
+
+/* MENU */
+const menuClose = e => {
+  document.getElementById('menubutton').classList.toggle('close')
+  document.getElementById('aside').classList.toggle('navBar-close')
+}
+
+const aside = document.querySelector('#aside')
+const navHeight = aside.offsetHeight
+function changeMenuWhenScroll() {
+  if (window.scrollY >= navHeight) {
+    aside.classList.add('scroll')
+  } else {
+    aside.classList.remove('scroll')
+  }
+}
+const sections = document.querySelectorAll('main section[id]')
+console.log(sections)
+function activeMenuSection() {
+  const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
+
+  for (const section of sections) {
+    const sectionTop = section.offsetTop
+    const sectionHeight = section.offsetHeight
+    const sectionId = section.getAttribute('id')
+
+    const checkpointStart = checkpoint >= sectionTop
+    const checkpointEnd = checkpoint <= sectionTop + sectionHeight
+
+    if (checkpointStart && checkpointEnd) {
+      document
+        .querySelector('nav div.buttons ul li a[href*=' + sectionId + ']')
+        .classList.add('active')
+    } else {
+      document
+        .querySelector('nav div.buttons ul li a[href*=' + sectionId + ']')
+        .classList.remove('active')
+    }
+  }
+}
+
+window.addEventListener('scroll', function () {
+  activeMenuSection()
+  changeMenuWhenScroll()
+})
