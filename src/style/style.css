@@ -766,8 +766,9 @@ main #contact .formu img {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 100%;
-    max-width: 100%;
+    min-width: 22.5rem;
+    max-width: 55.25rem;
+    overflow-x: hidden;
     height: 4rem;
     bottom: 0;
     z-index: 1994;

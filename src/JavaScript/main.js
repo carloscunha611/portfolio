@@ -9,10 +9,7 @@ function showLoading() {
 
   document.body.appendChild(div)
 
-  const portifolio = document.querySelectorAll('.active')
-  if (portifolio) {
-    hideLoading()
-  }
+  setTimeout(() => hideLoading(), 1500)
 }
 showLoading()
 function hideLoading() {
