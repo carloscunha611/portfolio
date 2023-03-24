@@ -144,22 +144,26 @@ formSubmit.init()
 
 /* MENU */
 const menuClose = e => {
-  document.getElementById('menubutton').classList.toggle('close')
-  document.getElementById('aside').classList.toggle('navBar-close')
+  const menuButton = document.getElementById('menubutton')
+  const aside = document.getElementById('aside')
+  menuButton.classList.toggle('close')
+  aside.classList.toggle('navBar-close')
 }
 
-const aside = document.querySelector('#aside')
+const aside = document.getElementById('aside')
 const navHeight = aside.offsetHeight
-function changeMenuWhenScroll() {
+
+const changeMenuWhenScroll = () => {
   if (window.scrollY >= navHeight) {
     aside.classList.add('scroll')
   } else {
     aside.classList.remove('scroll')
   }
 }
+
 const sections = document.querySelectorAll('main section[id]')
-console.log(sections)
-function activeMenuSection() {
+
+const activeMenuSection = () => {
   const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
 
   for (const section of sections) {
@@ -170,19 +174,14 @@ function activeMenuSection() {
     const checkpointStart = checkpoint >= sectionTop
     const checkpointEnd = checkpoint <= sectionTop + sectionHeight
 
-    if (checkpointStart && checkpointEnd) {
-      document
-        .querySelector('nav div.buttons ul li a[href*=' + sectionId + ']')
-        .classList.add('active')
-    } else {
-      document
-        .querySelector('nav div.buttons ul li a[href*=' + sectionId + ']')
-        .classList.remove('active')
-    }
+    const menuItem = document.querySelector(
+      `nav div.buttons ul li a[href*="${sectionId}"]`
+    )
+    menuItem.classList.toggle('active', checkpointStart && checkpointEnd)
   }
 }
 
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', () => {
   activeMenuSection()
   changeMenuWhenScroll()
 })
