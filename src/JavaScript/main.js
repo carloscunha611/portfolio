@@ -8,10 +8,14 @@ function showLoading() {
   div.appendChild(label)
 
   document.body.appendChild(div)
-
-  setTimeout(() => hideLoading(), 1500)
 }
+
 showLoading()
+
+window.onload = function () {
+  hideLoading()
+}
+
 function hideLoading() {
   const loading = document.getElementsByClassName('loading')
   if (loading.length) {
