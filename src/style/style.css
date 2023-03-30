@@ -523,6 +523,7 @@ main #about .informations {
   display: flex;
   height: 32rem;
   width: 100%;
+  margin-top: 1rem;
 }
 main #about .informations ul {
   display: flex;
@@ -535,7 +536,7 @@ main #about .informations .infos {
   padding: 2rem;
   width: 50%;
   height: 100%;
-  border: 2px dotted rgba(206, 206, 206, 0.5019607843);
+  border: 4px double rgba(206, 206, 206, 0.5019607843);
   background: rgba(31, 31, 31, 0.5019607843);
   backdrop-filter: blur(1px);
 }
@@ -548,6 +549,9 @@ main #about .informations .infos li {
 }
 main #about .informations .infos li span {
   color: #f2ce66;
+}
+main #about .informations .infos li a {
+  color: #ff0044;
 }
 main #about .informations .infos:hover {
   border-color: #cecece;
