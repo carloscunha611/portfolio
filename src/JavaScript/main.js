@@ -186,60 +186,55 @@ window.addEventListener('scroll', () => {
 })
 
 /* website imagens */
-function trocarImagemPorGif(imagem, imagemUrl, gifUrl) {
-  imagem.addEventListener('mouseover', function () {
-    imagem.setAttribute('src', gifUrl)
-  })
-  imagem.addEventListener('mouseout', function () {
-    imagem.setAttribute('src', imagemUrl)
-  })
-}
+const imagens = [
+  {
+    id: 'websiteImage1',
+    imagemUrl: './src/assets/icons/ihuul-bg1.png',
+    gifUrl: './src/assets/icons/gifs/ihuul-gif.gif'
+  },
+  {
+    id: 'websiteImage2',
+    imagemUrl: './src/assets/icons/halo-bg1.png',
+    gifUrl: './src/assets/icons/gifs/halo-gif.gif'
+  },
+  {
+    id: 'websiteImage3',
+    imagemUrl: './src/assets/icons/bs-bg1.png',
+    gifUrl: './src/assets/icons/gifs/bs-gif.gif'
+  },
+  {
+    id: 'websiteImage4',
+    imagemUrl: './src/assets/icons/projectFalcon-bg1.png',
+    gifUrl: './src/assets/icons/gifs/projectFalcon-gif.gif'
+  },
+  {
+    id: 'websiteImage5',
+    imagemUrl: './src/assets/icons/myTrovoSpace-bg1.png',
+    gifUrl: './src/assets/icons/gifs/myTrovoSpace-gif.gif'
+  },
+  {
+    id: 'websiteImage6',
+    imagemUrl: './src/assets/icons/foxFoxGo-bg1.png',
+    gifUrl: './src/assets/icons/gifs/foxFoxGo-gif.gif'
+  },
+  {
+    id: 'websiteImage7',
+    imagemUrl: './src/assets/icons/vaultCard-bg1.png',
+    gifUrl: './src/assets/icons/gifs/vaultCard-gif.gif'
+  },
+  {
+    id: 'websiteImage8',
+    imagemUrl: './src/assets/icons/habits-bg1.png',
+    gifUrl: './src/assets/icons/gifs/habits-gif.gif'
+  }
+]
 
-var websiteImage1 = document.getElementById('websiteImage1')
-trocarImagemPorGif(
-  websiteImage1,
-  './src/assets/icons/ihuul-bg1.png',
-  './src/assets/icons/gifs/ihuul-gif.gif'
-)
-var websiteImage2 = document.getElementById('websiteImage2')
-trocarImagemPorGif(
-  websiteImage2,
-  './src/assets/icons/halo-bg1.png',
-  './src/assets/icons/gifs/halo-gif.gif'
-)
-var websiteImage3 = document.getElementById('websiteImage3')
-trocarImagemPorGif(
-  websiteImage3,
-  './src/assets/icons/bs-bg1.png',
-  './src/assets/icons/gifs/bs-gif.gif'
-)
-var websiteImage4 = document.getElementById('websiteImage4')
-trocarImagemPorGif(
-  websiteImage4,
-  './src/assets/icons/projectFalcon-bg1.png',
-  './src/assets/icons/gifs/projectFalcon-gif.gif'
-)
-var websiteImage5 = document.getElementById('websiteImage5')
-trocarImagemPorGif(
-  websiteImage5,
-  './src/assets/icons/myTrovoSpace-bg1.png',
-  './src/assets/icons/gifs/myTrovoSpace-gif.gif'
-)
-var websiteImage6 = document.getElementById('websiteImage6')
-trocarImagemPorGif(
-  websiteImage6,
-  './src/assets/icons/foxFoxGo-bg1.png',
-  './src/assets/icons/gifs/foxFoxGo-gif.gif'
-)
-var websiteImage7 = document.getElementById('websiteImage7')
-trocarImagemPorGif(
-  websiteImage7,
-  './src/assets/icons/vaultCard-bg1.png',
-  './src/assets/icons/gifs/vaultCard-gif.gif'
-)
-var websiteImage8 = document.getElementById('websiteImage8')
-trocarImagemPorGif(
-  websiteImage8,
-  './src/assets/icons/habits-bg1.png',
-  './src/assets/icons/gifs/habits-gif.gif'
-)
+imagens.forEach(function (imagem) {
+  const element = document.getElementById(imagem.id)
+  element.addEventListener('mouseover', function () {
+    element.setAttribute('src', imagem.gifUrl)
+  })
+  element.addEventListener('mouseout', function () {
+    element.setAttribute('src', imagem.imagemUrl)
+  })
+})
