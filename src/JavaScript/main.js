@@ -228,8 +228,8 @@ trocarImagemPorGif(
 var websiteImage6 = document.getElementById('websiteImage6')
 trocarImagemPorGif(
   websiteImage6,
-  './src/assets/icons/FoxFoxGo-bg1.png',
-  './src/assets/icons/gifs/FoxFoxGo-gif.gif'
+  './src/assets/icons/foxFoxGo-bg1.png',
+  './src/assets/icons/gifs/foxFoxGo-gif.gif'
 )
 var websiteImage7 = document.getElementById('websiteImage7')
 trocarImagemPorGif(
