@@ -3,7 +3,7 @@ function showLoading() {
   div.classList.add('loading')
 
   const label = document.createElement('label')
-  label.innerHTML = 'Carregando...'
+  label.innerText = 'Carregando...'
 
   div.appendChild(label)
 
@@ -27,13 +27,12 @@ function hideLoading() {
 async function getGitHubProfileInfos() {
   const url = `https://api.github.com/users/carloscunha611`
 
-  fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      userImage.src = data.avatar_url
-      userBio.textContent = data.bio
-      userImageMobile.src = data.avatar_url
-    })
+  const response = await fetch(url)
+  const data = await response.json()
+
+  userImage.src = data.avatar_url
+  userBio.textContent = data.bio
+  userImageMobile.src = data.avatar_url
 }
 
 getGitHubProfileInfos()
@@ -185,3 +184,62 @@ window.addEventListener('scroll', () => {
   activeMenuSection()
   changeMenuWhenScroll()
 })
+
+/* website imagens */
+function trocarImagemPorGif(imagem, imagemUrl, gifUrl) {
+  imagem.addEventListener('mouseover', function () {
+    imagem.setAttribute('src', gifUrl)
+  })
+  imagem.addEventListener('mouseout', function () {
+    imagem.setAttribute('src', imagemUrl)
+  })
+}
+
+var websiteImage1 = document.getElementById('websiteImage1')
+trocarImagemPorGif(
+  websiteImage1,
+  './src/assets/icons/ihuul-bg1.png',
+  './src/assets/icons/gifs/ihuul-gif.gif'
+)
+var websiteImage2 = document.getElementById('websiteImage2')
+trocarImagemPorGif(
+  websiteImage2,
+  './src/assets/icons/halo-bg1.png',
+  './src/assets/icons/gifs/halo-gif.gif'
+)
+var websiteImage3 = document.getElementById('websiteImage3')
+trocarImagemPorGif(
+  websiteImage3,
+  './src/assets/icons/bs-bg1.png',
+  './src/assets/icons/gifs/bs-gif.gif'
+)
+var websiteImage4 = document.getElementById('websiteImage4')
+trocarImagemPorGif(
+  websiteImage4,
+  './src/assets/icons/projectFalcon-bg1.png',
+  './src/assets/icons/gifs/projectFalcon-gif.gif'
+)
+var websiteImage5 = document.getElementById('websiteImage5')
+trocarImagemPorGif(
+  websiteImage5,
+  './src/assets/icons/myTrovoSpace-bg1.png',
+  './src/assets/icons/gifs/myTrovoSpace-gif.gif'
+)
+var websiteImage6 = document.getElementById('websiteImage6')
+trocarImagemPorGif(
+  websiteImage6,
+  './src/assets/icons/FoxFoxGo-bg1.png',
+  './src/assets/icons/gifs/FoxFoxGo-gif.gif'
+)
+var websiteImage7 = document.getElementById('websiteImage7')
+trocarImagemPorGif(
+  websiteImage7,
+  './src/assets/icons/vaultCard-bg1.png',
+  './src/assets/icons/gifs/vaultCard-gif.gif'
+)
+var websiteImage8 = document.getElementById('websiteImage8')
+trocarImagemPorGif(
+  websiteImage8,
+  './src/assets/icons/habits-bg1.png',
+  './src/assets/icons/gifs/habits-gif.gif'
+)
