@@ -30,16 +30,26 @@ body #contact {
 
 body {
   align-content: center;
-  background: url("../../src/assets/bgimgH1.jpg") center/cover;
+  background: #141414;
   overflow-x: hidden;
   transition: all ease-in-out 0.3s;
+}
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(58, 58, 58, 0.5019607843);
+  border-radius: 0.25rem;
+}
+body::-webkit-scrollbar-track {
+  background-color: rgba(31, 31, 31, 0.5019607843);
 }
 
 .loading {
   position: fixed;
   height: 100vh;
   width: 100%;
-  background: rgba(31, 31, 31, 0.5019607843);
+  background: linear-gradient(to right, #1f1f1f, rgba(31, 31, 31, 0.5019607843));
   backdrop-filter: blur(15px);
   z-index: 9999;
   overflow: hidden;
@@ -64,7 +74,7 @@ aside {
   right: auto;
   font-family: "Rubik", sans-serif;
   padding-bottom: 1.5rem;
-  background: rgba(31, 31, 31, 0.5019607843);
+  background: linear-gradient(to right, #1f1f1f, rgba(31, 31, 31, 0.5019607843));
   backdrop-filter: blur(1px);
   box-shadow: 4px 0px 8px #000000;
   transition: all 0.3s ease-in-out;
@@ -262,7 +272,7 @@ aside.navBar-close .navBar .buttons .buttonList li a span {
 }
 
 main {
-  position: absolute;
+  position: relative;
   color: #ccc;
   width: 100%;
   height: auto;
@@ -304,7 +314,7 @@ main .txt-area div .button {
   border: none;
   border-radius: 0.5rem;
   padding: 0rem 0.3rem;
-  background: rgba(31, 31, 31, 0.5019607843);
+  background: linear-gradient(to right, #1f1f1f, rgba(31, 31, 31, 0.5019607843));
   transition: all 0.3s ease-in-out;
 }
 main .txt-area div .button a {
@@ -377,6 +387,7 @@ main .button-contact:hover a {
   color: #f2ce66;
 }
 main #welcome {
+  background: url("../../src/assets/bg-home.png") top no-repeat;
   display: flex;
   flex-direction: column;
   padding: 4rem 4rem;
@@ -401,12 +412,16 @@ main #welcome .contact a {
   padding: 1rem;
   font-size: 1.5rem;
 }
+main #portfolio,
+main #about,
+main #contact {
+  background: url("../../src/assets/bgImg.png") top/cover no-repeat;
+}
 main #portfolio {
   display: flex;
   flex-direction: column;
   position: relative;
   align-items: flex-start;
-  gap: 2rem;
 }
 main #portfolio div {
   text-align: left;
@@ -418,12 +433,13 @@ main #portfolio div p {
 }
 main #portfolio .web-sites {
   width: 100%;
-  height: 100vh;
+  height: 24rem;
 }
 main #portfolio .web-sites .site-list {
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   padding-left: 0rem;
   height: 100%;
@@ -438,7 +454,7 @@ main #portfolio .web-sites .site-list li.active .details {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(31, 31, 31, 0.5019607843);
+  background: linear-gradient(to right, #1f1f1f, rgba(31, 31, 31, 0.5019607843));
   backdrop-filter: blur(1px);
   width: 100%;
   height: 100%;
@@ -454,7 +470,6 @@ main #portfolio .web-sites .site-list li.active .details .web-site-icon {
   left: 2px;
   width: 1.5rem;
   max-width: 1.5rem;
-  transition: 0.3s ease-out;
 }
 main #portfolio .web-sites .site-list li.active .details .moldura {
   width: 8rem;
@@ -476,7 +491,7 @@ main #portfolio .web-sites .site-list li.active .web-site-button {
   width: 8rem;
   border-radius: 0.5rem;
   border: 2px solid rgba(206, 206, 206, 0.5019607843);
-  background: rgba(31, 31, 31, 0.5019607843);
+  background: linear-gradient(to right, #1f1f1f, rgba(31, 31, 31, 0.5019607843));
   backdrop-filter: blur(5px);
   color: #cecece;
   font-size: 1rem;
@@ -486,7 +501,6 @@ main #portfolio .web-sites .site-list li.active .web-site-button {
 }
 main #portfolio .web-sites .site-list li.active:hover .details, main #portfolio .web-sites .site-list li.active:focus .details {
   border-color: #f2ce66;
-  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
 }
 main #portfolio .web-sites .site-list li.active:hover .details .web-site-icon, main #portfolio .web-sites .site-list li.active:focus .details .web-site-icon {
   border-color: #f2ce66;
@@ -537,7 +551,7 @@ main #about .informations .infos {
   width: 50%;
   height: 100%;
   border: 4px double rgba(206, 206, 206, 0.5019607843);
-  background: rgba(31, 31, 31, 0.5019607843);
+  background: linear-gradient(to right, #1f1f1f, rgba(31, 31, 31, 0.5019607843));
   backdrop-filter: blur(1px);
 }
 main #about .informations .infos ul {
@@ -577,16 +591,20 @@ main #about .informations .techs .stack {
   border-radius: 0.5rem;
   border: 1px solid transparent;
   transition: all 0.3s ease-in-out;
-  background: rgba(31, 31, 31, 0.5019607843);
+  background: linear-gradient(to right, #1f1f1f, rgba(31, 31, 31, 0.5019607843));
 }
 main #about .informations .techs .stack span {
   width: 100%;
   font-size: 0.6rem;
   text-transform: uppercase;
   border-right: 1px solid;
+  z-index: 3;
 }
 main #about .informations .techs .stack img {
+  z-index: 3;
   width: 4rem;
+  -webkit-filter: drop-shadow(1px 1px 0 #141414) drop-shadow(1px 1px 0 #141414);
+  filter: drop-shadow(1px 1px 0 #141414) drop-shadow(1px 1px 0 #141414);
 }
 main #about .informations .techs .stack::before {
   content: "";
@@ -596,10 +614,10 @@ main #about .informations .techs .stack::before {
   border-radius: 50%;
   top: 10%;
   right: 10%;
-  z-index: -98;
   background: #cecece;
   animation: move-moonStack 2s ease-in infinite alternate-reverse;
   transition: all ease 0.3s;
+  z-index: 1;
 }
 main #about .informations .techs .stack::after {
   content: "";
@@ -609,8 +627,9 @@ main #about .informations .techs .stack::after {
   border-radius: 0.5rem;
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
-  z-index: -98;
+  z-index: -99;
   background: rgba(37, 37, 37, 0.164);
+  z-index: 2;
 }
 main #about .informations .techs .stack:hover:nth-child(odd)::before {
   background: #f2ce66;
@@ -646,14 +665,14 @@ main #contact .formu form label {
   font-size: 1.5rem;
 }
 main #contact .formu form input {
-  background: rgba(31, 31, 31, 0.5019607843);
+  background: linear-gradient(to right, #1f1f1f, rgba(31, 31, 31, 0.5019607843));
   border-radius: 0.3rem;
   padding-left: 1rem;
   border: none;
   height: 2rem;
 }
 main #contact .formu form textarea {
-  background: rgba(31, 31, 31, 0.5019607843);
+  background: linear-gradient(to right, #1f1f1f, rgba(31, 31, 31, 0.5019607843));
   border-radius: 0.3rem;
   padding: 1rem;
   border: none;
@@ -675,6 +694,41 @@ main #contact .formu form :focus-visible {
 main #contact .formu img {
   width: 50%;
   opacity: 0.5;
+}
+
+footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #141414;
+  width: 100%;
+  height: 8rem;
+  gap: 4rem;
+}
+footer p,
+footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  text-align: center;
+}
+footer img {
+  width: 1rem;
+  max-width: 1.5rem;
+}
+footer span {
+  margin-left: 0.5rem;
+}
+footer span:nth-child(1) {
+  color: #f2ce66;
+}
+footer span:nth-child(2) {
+  color: #108944;
+}
+footer span:nth-child(3) {
+  color: #f2ce66;
 }
 
 @keyframes buttonAnimation {
@@ -715,10 +769,10 @@ main #contact .formu img {
 }
 @keyframes noise {
   to {
-    background: linear-gradient(rgba(10, 10, 10, 0.1), rgba(0, 0, 0, 0.1)), repeating-linear-gradient(0, transparent, transparent 2px, #141414 2px, #141414 2px), url("../../src/assets/bgimgH1.jpg") center/cover;
+    background: linear-gradient(rgba(10, 10, 10, 0.1), rgba(0, 0, 0, 0.1)), repeating-linear-gradient(0, transparent, transparent 2px, #141414 2px, #141414 2px), url("../../src/assets/bgImg.png") center/cover;
   }
   from {
-    background: linear-gradient(rgba(10, 10, 10, 0.2), rgba(0, 0, 0, 0.1)), repeating-linear-gradient(0, transparent, transparent 1px, #141414 2px, #141414 2px), url("../../src/assets/bgimgH1.jpg") center/cover;
+    background: linear-gradient(rgba(10, 10, 10, 0.2), rgba(0, 0, 0, 0.1)), repeating-linear-gradient(0, transparent, transparent 1px, #141414 2px, #141414 2px), url("../../src/assets/bgImg.png") center/cover;
   }
 }
 @keyframes shadow {
@@ -779,7 +833,7 @@ main #contact .formu img {
     height: 4rem;
     bottom: 0;
     z-index: 1994;
-    background: rgba(31, 31, 31, 0.5019607843);
+    background: linear-gradient(to right, #1f1f1f, rgba(31, 31, 31, 0.5019607843));
     backdrop-filter: blur(1px);
     box-shadow: 4px 0px 8px #000000;
   }
@@ -1016,6 +1070,10 @@ main #contact .formu img {
   main #contact .txt-area .formu button {
     margin-top: 1.5rem;
     margin-left: 0rem;
+  }
+
+  footer {
+    display: none;
   }
 }
 

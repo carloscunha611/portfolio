@@ -4,6 +4,7 @@ function showLoading() {
 
   const label = document.createElement('label')
   label.innerText = 'Carregando...'
+  label.classList.add('loadingTxt')
 
   div.appendChild(label)
 
@@ -206,21 +207,6 @@ const imagens = [
     id: 'websiteImage4',
     imagemUrl: './src/assets/icons/projectFalcon-bg1.png',
     gifUrl: './src/assets/icons/gifs/projectFalcon-gif.gif'
-  },
-  {
-    id: 'websiteImage5',
-    imagemUrl: './src/assets/icons/myTrovoSpace-bg1.png',
-    gifUrl: './src/assets/icons/gifs/myTrovoSpace-gif.gif'
-  },
-  {
-    id: 'websiteImage6',
-    imagemUrl: './src/assets/icons/foxFoxGo-bg1.png',
-    gifUrl: './src/assets/icons/gifs/foxFoxGo-gif.gif'
-  },
-  {
-    id: 'websiteImage7',
-    imagemUrl: './src/assets/icons/vaultCard-bg1.png',
-    gifUrl: './src/assets/icons/gifs/vaultCard-gif.gif'
   },
   {
     id: 'websiteImage8',
