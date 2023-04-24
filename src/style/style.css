@@ -387,7 +387,7 @@ main .button-contact:hover a {
   color: #f2ce66;
 }
 main #welcome {
-  background: url("../../src/assets/bg-home.png") top no-repeat;
+  background: url("../../src/assets/bg-home.png") top/cover no-repeat;
   display: flex;
   flex-direction: column;
   padding: 4rem 4rem;
@@ -486,18 +486,24 @@ main #portfolio .web-sites .site-list li.active .details .moldura img {
   object-fit: cover;
 }
 main #portfolio .web-sites .site-list li.active .web-site-button {
+  display: flex;
+  justify-content: space-evenly;
   position: absolute;
-  transform: translate(0%, 500%);
+  transform: translate(0%, 400%);
   width: 8rem;
+  height: 3rem;
   border-radius: 0.5rem;
   border: 2px solid rgba(206, 206, 206, 0.5019607843);
   background: linear-gradient(to right, #1f1f1f, rgba(31, 31, 31, 0.5019607843));
   backdrop-filter: blur(5px);
   color: #cecece;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.5rem;
   opacity: 0;
   transition: 0.3s ease-out;
+}
+main #portfolio .web-sites .site-list li.active .web-site-button a {
+  text-align: center;
 }
 main #portfolio .web-sites .site-list li.active:hover .details, main #portfolio .web-sites .site-list li.active:focus .details {
   border-color: #f2ce66;
@@ -509,11 +515,11 @@ main #portfolio .web-sites .site-list li.active:hover .details .moldura, main #p
   border-color: #f2ce66;
 }
 main #portfolio .web-sites .site-list li.active:hover .web-site-button, main #portfolio .web-sites .site-list li.active:focus .web-site-button {
-  transform: translate(0%, 330%);
+  transform: translate(0%, 275%);
   border-color: #f2ce66;
   opacity: 1;
 }
-main #portfolio .web-sites .site-list li.active:hover .web-site-button a:hover, main #portfolio .web-sites .site-list li.active:focus .web-site-button a:hover {
+main #portfolio .web-sites .site-list li.active:hover .web-site-button a:hover ion-icon, main #portfolio .web-sites .site-list li.active:focus .web-site-button a:hover ion-icon {
   color: #108944;
 }
 main #portfolio .web-sites .site-list li.active:nth-child(even):hover .details {
@@ -769,10 +775,10 @@ footer span:nth-child(3) {
 }
 @keyframes noise {
   to {
-    background: linear-gradient(rgba(10, 10, 10, 0.1), rgba(0, 0, 0, 0.1)), repeating-linear-gradient(0, transparent, transparent 2px, #141414 2px, #141414 2px), url("../../src/assets/bgImg.png") center/cover;
+    background: linear-gradient(rgba(10, 10, 10, 0.1), rgba(0, 0, 0, 0.1)), repeating-linear-gradient(0, transparent, transparent 2px, #141414 2px, #141414 2px), url("../../src/assets/bgImg.png") top/cover no-repeat center/cover;
   }
   from {
-    background: linear-gradient(rgba(10, 10, 10, 0.2), rgba(0, 0, 0, 0.1)), repeating-linear-gradient(0, transparent, transparent 1px, #141414 2px, #141414 2px), url("../../src/assets/bgImg.png") center/cover;
+    background: linear-gradient(rgba(10, 10, 10, 0.2), rgba(0, 0, 0, 0.1)), repeating-linear-gradient(0, transparent, transparent 1px, #141414 2px, #141414 2px), url("../../src/assets/bgImg.png") top/cover no-repeat center/cover;
   }
 }
 @keyframes shadow {

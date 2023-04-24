@@ -1,3 +1,5 @@
 /.hintrc
 /desktop.ini
 /scss
+/.vscode
+/src/style/style.css.map
