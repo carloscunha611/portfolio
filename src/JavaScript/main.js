@@ -18,7 +18,7 @@ window.onload = function () {
 }
 
 function hideLoading() {
-  const loading = document.getElementsByClassName('loading')
+  const loading = document.getElementsByClassName('loadingTxt')
   if (loading.length) {
     loading[0].remove()
   }
@@ -33,6 +33,7 @@ async function getGitHubProfileInfos() {
 
   userImage.src = data.avatar_url
   userBio.textContent = data.bio
+  Commits.textContent = data.public_repos
   userImageMobile.src = data.avatar_url
 }
 

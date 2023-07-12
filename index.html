@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./src/JavaScript/main.js" defer></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,7 +21,7 @@
     <title>Carlos Cunha | Desenvolvedor Front End</title>
   </head>
   <body>
-    <aside id="aside" class="navBar-close">
+    <aside id="aside" class="navBar-close close">
       <nav class="navBar" id="navBar">
         <div id="menubutton" class="close">
           <ion-icon
@@ -34,6 +35,7 @@
             name="chevron-forward"
           ></ion-icon>
         </div>
+
         <div class="perfil">
           <img
             id="userImage"
@@ -46,6 +48,11 @@
               <span>C</span>arlos <span>C</span>unha
             </p>
             <p class="bio" id="userBio"></p>
+
+            <div class="info">
+              <p><ion-icon name="git-commit-outline"></ion-icon></p>
+              <p id="Commits"></p>
+            </div>
           </div>
         </div>
 
@@ -53,7 +60,7 @@
           <ul class="buttonList">
             <li>
               <a href="#welcome" class="active"
-                ><ion-icon name="planet"></ion-icon><span>Home</span></a
+                ><ion-icon name="home"></ion-icon><span>Home</span></a
               >
             </li>
             <li>
@@ -90,7 +97,7 @@
             </li>
             <li>
               <a
-                href="https://www.instagram.com/carloscunha611_/"
+                href="https://www.instagram.com/carloscunhajr_/"
                 target="_blank"
                 ><ion-icon name="logo-instagram"></ion-icon
               ></a>
@@ -114,7 +121,7 @@
         <ul class="buttonList">
           <li>
             <a href="#welcome" class="active"
-              ><ion-icon name="planet"></ion-icon
+              ><ion-icon name="home"></ion-icon
             ></a>
           </li>
           <li>
@@ -135,7 +142,7 @@
         <div class="txt-welcome">
           <h1 class="main-title">
             Olá,<br />
-            eu sou o Carlos<br />
+            eu sou o <span>Carlos</span><br />
             Desenvolvedor web.
           </h1>
         </div>
@@ -150,11 +157,13 @@
           <h1><span>M</span>eu <span>P</span>ortfólio</h1>
           <div class="txt-area">
             <p>
-              Aqui está a minha galeria de alguns sites criados por mim
+              Aqui está a minha galeria com alguns projetos criados por mim
               recentemente.
             </p>
             <button class="button">
-              <a href="https://github.com/carloscunha611" target="_blank"
+              <a
+                href="https://github.com/carloscunha611?tab=repositories"
+                target="_blank"
                 >Veja mais</a
               >
             </button>
@@ -333,19 +342,17 @@
             <div data-aos="fade-left" class="infos">
               <ul>
                 <li>
-                  Olá! Sou um desenvolvedor web com grande dedicação em aprender
-                  e aprimorar minhas habilidades em programação. Estou
-                  constantemente em busca de novas ferramentas e metodologias
-                  para tornar meus projetos mais eficientes e criativos. Estou
-                  aberto a desafios e oportunidades para crescer em minha
-                  carreira. Vamos trabalhar juntos para criar soluções web de
-                  excelência!
+                  Sou um profissional recentemente formado em Análise e
+                  Desenvolvimento de Sistemas, entusiasmado em buscar minha
+                  primeira oportunidade e me especializar como desenvolvedor
+                  Full Stack.
                 </li>
                 <li>
-                  <span>Experiencia:</span> Apesar de não possuir experiência
-                  profissional como desenvolvedor, já executei diversos projetos
-                  pessoais e exercícios de programação que me permitiram
-                  aprimorar minhas habilidades e conhecimentos técnicos.
+                  <span>-</span> Familiaridade com design responsivo e
+                  princípios de usabilidade;<br />
+                  <span>-</span> Experiência em criação de projetos web;<br />
+                  <span>-</span> Versionamento de projetos com GIT e GITHUB;<br />
+                  <span>-</span> Criação de código limpo, legível.
                 </li>
                 <li>
                   <span>Curso superior:</span> Análise e Desenvolvimento de
@@ -468,17 +475,19 @@
 
     <footer>
       <p class="by">
-        Feito por <span>C</span>arlos <span>C</span>unha <span>Jr</span>. -
-        &copy; 2022
+        Dev. by <span>C</span>arlos <span>C</span>unha <span>Jr</span>. &copy;
+        2022
       </p>
-      <img src="./src/assets/logoC.png" />
-      <a href="#welcome">Início</a>
-      <a href="#portfolio">Portfólio</a>
-      <a href="#about">Sobre</a>
-      <a href="#contact">Contato</a>
-      <a href="https://carloscunha611.github.io/portfolio/"
-        ><img src="./src/assets/logoC.png"
-      /></a>
+
+      <div class="socialFooter">
+        <a href="#welcome">Início</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#about">Sobre</a>
+        <a href="#contact">Contato</a>
+        <a href="https://carloscunha611.github.io/myhub/" target="_blank"
+          >MyHub</a
+        >
+      </div>
     </footer>
 
     <!-- scripts -->
@@ -491,8 +500,6 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <script src="./src/JavaScript/main.js"></script>
-
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init()

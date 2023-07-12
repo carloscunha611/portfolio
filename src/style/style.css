@@ -42,7 +42,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 0.25rem;
 }
 body::-webkit-scrollbar-track {
-  background-color: rgba(31, 31, 31, 0.5019607843);
+  background: linear-gradient(to right, #1f1f1f, rgba(31, 31, 31, 0.5019607843));
 }
 
 .loading {
@@ -66,24 +66,24 @@ body::-webkit-scrollbar-track {
 
 aside {
   position: fixed;
-  width: 16rem;
+  width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   bottom: 0;
   right: auto;
   font-family: "Rubik", sans-serif;
-  padding-bottom: 1.5rem;
-  background: linear-gradient(to right, #1f1f1f, rgba(31, 31, 31, 0.5019607843));
-  backdrop-filter: blur(1px);
-  box-shadow: 4px 0px 8px #000000;
-  transition: all 0.3s ease-in-out;
   z-index: 1994;
 }
 aside .navBar {
   flex-direction: column;
   height: 100%;
   overflow: hidden;
+  background: linear-gradient(to right, #1f1f1f, rgba(31, 31, 31, 0.5019607843));
+  backdrop-filter: blur(1px);
+  box-shadow: 4px 0px 8px #000000;
+  padding-bottom: 1.5rem;
+  transition: all 0.3s ease-in-out;
 }
 aside .navBar,
 aside .navBar #menubutton,
@@ -91,7 +91,7 @@ aside .navBar .perfil,
 aside .navBar .social {
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 16rem;
 }
 aside .navBar #menubutton {
   justify-content: flex-end;
@@ -126,9 +126,14 @@ aside .navBar .perfil .photo:hover {
   box-shadow: -0.3rem 0 0 #f2ce66, -0.5rem 0 0 #108944;
 }
 aside .navBar .perfil .nameBio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
   color: #cecece;
   user-select: none;
+  gap: 0.25rem;
 }
 aside .navBar .perfil .nameBio .name {
   font-size: 1.5rem;
@@ -148,6 +153,16 @@ aside .navBar .perfil .nameBio .bio {
 }
 aside .navBar .perfil .nameBio .bio:hover {
   color: #108944;
+}
+aside .navBar .perfil .nameBio .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 1.5rem;
+  font-size: 0.6rem;
+  border-radius: 10%;
+  background: rgba(206, 206, 206, 0.5019607843);
 }
 aside .navBar .buttons {
   display: grid;
@@ -219,6 +234,9 @@ aside .navBar .social .socialMidiaList li:hover ion-icon {
   transition: all 0.3s ease;
 }
 aside.navBar-close {
+  width: 4rem;
+}
+aside.navBar-close .navBar {
   width: 4rem;
 }
 aside.navBar-close .navBar #menubutton .button-close {
@@ -399,6 +417,11 @@ main #welcome .txt-welcome {
   text-align: left;
   user-select: none;
   filter: drop-shadow(-0.2rem 0 0 #108944);
+}
+main #welcome .txt-welcome span {
+  background: linear-gradient(90deg, #f2ce66 38.56%, #108944 67.55%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 main #welcome .contact {
   position: relative;
@@ -721,7 +744,7 @@ footer a {
   text-align: center;
 }
 footer img {
-  width: 1rem;
+  width: 1.5rem;
   max-width: 1.5rem;
 }
 footer span {
@@ -735,6 +758,10 @@ footer span:nth-child(2) {
 }
 footer span:nth-child(3) {
   color: #f2ce66;
+}
+footer .socialFooter {
+  display: flex;
+  gap: 1rem;
 }
 
 @keyframes buttonAnimation {
@@ -1078,8 +1105,17 @@ footer span:nth-child(3) {
     margin-left: 0rem;
   }
 
+  #contact {
+    height: 100%;
+  }
+
   footer {
-    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0.5rem 2rem 0.5rem;
+    align-items: start;
+    height: 8rem;
+    margin-bottom: 3rem;
   }
 }
 
