@@ -49,10 +49,20 @@
             </p>
             <p class="bio" id="userBio"></p>
 
-            <div class="info">
-              <p><ion-icon name="git-commit-outline"></ion-icon></p>
-              <p id="Commits"></p>
-            </div>
+            <ul class="gitInfos">
+              <li>
+                <p><ion-icon name="git-commit-sharp"></ion-icon></p>
+                <p id="commits"></p>
+              </li>
+              <li>
+                <p><ion-icon name="person-sharp"></ion-icon></p>
+                <p id="following"></p>
+              </li>
+              <li>
+                <p><ion-icon name="people-sharp"></ion-icon></p>
+                <p id="followers"></p>
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -161,10 +171,8 @@
               recentemente.
             </p>
             <button class="button">
-              <a
-                href="https://github.com/carloscunha611?tab=repositories"
-                target="_blank"
-                >Veja mais</a
+              <a href="https://carloscunha611.github.io/myhub/" target="_blank"
+                >MyHub</a
               >
             </button>
           </div>
@@ -178,6 +186,9 @@
                   src="./src/assets/icons/ihuul.png"
                   alt="icone do ihuul"
                 />
+                <div class="web-site-name">
+                  <p class="site-name">ihuul</p>
+                </div>
 
                 <div class="moldura">
                   <img
@@ -187,8 +198,6 @@
                     srcset="imagem do ihuul"
                   />
                 </div>
-
-                <p class="web-site-name">ihuul</p>
               </div>
               <button class="web-site-button">
                 <a
@@ -219,8 +228,9 @@
                     srcset="imagem do site do halo master chief collection"
                   />
                 </div>
-
-                <p class="web-site-name">Master Chief Collection</p>
+                <div class="web-site-name">
+                  <p class="site-name">Master Chief Collection</p>
+                </div>
               </div>
               <button class="web-site-button">
                 <a
@@ -251,8 +261,9 @@
                     srcset=""
                   />
                 </div>
-
-                <p class="web-site-name">beautysalon.</p>
+                <div class="web-site-name">
+                  <p class="site-name">beautysalon.</p>
+                </div>
               </div>
               <button class="web-site-button">
                 <a
@@ -283,8 +294,9 @@
                     srcset=""
                   />
                 </div>
-
-                <p class="web-site-name">Project Falcon</p>
+                <div class="web-site-name">
+                  <p class="site-name">Project Falcon</p>
+                </div>
               </div>
               <button class="web-site-button">
                 <a
@@ -315,8 +327,9 @@
                     srcset=""
                   />
                 </div>
-
-                <p class="web-site-name">habits</p>
+                <div class="web-site-name">
+                  <p class="site-name">habits</p>
+                </div>
               </div>
               <button class="web-site-button">
                 <a
@@ -342,26 +355,34 @@
             <div data-aos="fade-left" class="infos">
               <ul>
                 <li>
+                  Desenvolvedor web (Front-end) <span>Nivel:</span> Júnior
+                </li>
+                <li>
                   Sou um profissional recentemente formado em Análise e
                   Desenvolvimento de Sistemas, entusiasmado em buscar minha
                   primeira oportunidade e me especializar como desenvolvedor
                   Full Stack.
                 </li>
-                <li>
-                  <span>-</span> Familiaridade com design responsivo e
-                  princípios de usabilidade;<br />
-                  <span>-</span> Experiência em criação de projetos web;<br />
-                  <span>-</span> Versionamento de projetos com GIT e GITHUB;<br />
+                <li >
+                  <span>-</span> Design responsivo e
+                  princípios de usabilidade.<br />
+                  <span>-</span>Tratamento de erros, Exp. Regulares, Prog. Assíncrona, etc...<br />
+                  <span>-</span> Versionamento de projetos com GIT e GITHUB.<br />
                   <span>-</span> Criação de código limpo, legível.
                 </li>
                 <li>
-                  <span>Curso superior:</span> Análise e Desenvolvimento de
+                  <span>Superior completo:</span> Análise e Desenvolvimento de
                   Sistemas.
                 </li>
                 <li>
-                  <span>Outros Cursos:</span> Fullstack Proficional JavaScript -
-                  <a href="https://onebitcode.com/lp/" target="_blank"
+                  <span>Cursando:</span> Fullstack Proficional JavaScript -
+                  <a class="linkOBC" href="https://onebitcode.com/lp/" target="_blank"
                     >OneBitCode</a
+                  >.
+                </li>
+                <li>
+                  <a class="linkC" href="https://www.figma.com/file/BnPgDCv7za8HVuN6C0N1aB/curriculo-(current)?type=design&node-id=313%3A114&mode=design&t=vmh6HcJNOh8uL17q-1" target="_blank"
+                    >Ver currículo</a
                   >.
                 </li>
               </ul>
@@ -460,7 +481,7 @@
                 required
                 id="mensage"
                 name="mensage"
-                placeholder="Digite sua mensagem aqui."
+                placeholder="Digite sua mensagem, proposta,sugestão ou crítica aqui."
               ></textarea>
               <button class="contact button-contact" type="submit" data-button>
                 Enviar
@@ -468,6 +489,25 @@
               <input type="hidden" name="_captcha" value="false" />
             </form>
             <img src="./src/assets/@.png" alt="email" />
+          </div>
+
+          <div class="socials">
+            <ul class="links">
+              <li>
+                <a href="https://www.linkedin.com/in/carloscunha611/" target="_blank"
+                  ><ion-icon name="logo-linkedin"></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a href="https://github.com/carloscunha611" target="_blank"
+                  ><ion-icon name="logo-github"></ion-icon></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/carloscunhajr_/" target="_blank"
+                  ><ion-icon name="logo-instagram"></ion-icon></a>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

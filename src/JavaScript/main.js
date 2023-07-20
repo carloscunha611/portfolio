@@ -33,7 +33,9 @@ async function getGitHubProfileInfos() {
 
   userImage.src = data.avatar_url
   userBio.textContent = data.bio
-  Commits.textContent = data.public_repos
+  commits.textContent = data.public_repos
+  followers.textContent = data.followers
+  following.textContent = data.following
   userImageMobile.src = data.avatar_url
 }
 
