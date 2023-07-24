@@ -1,29 +1,3 @@
-function showLoading() {
-  const div = document.createElement('div')
-  div.classList.add('loading')
-
-  const label = document.createElement('label')
-  label.innerText = 'Carregando...'
-  label.classList.add('loadingTxt')
-
-  div.appendChild(label)
-
-  document.body.appendChild(div)
-}
-
-showLoading()
-
-window.onload = function () {
-  hideLoading()
-}
-
-function hideLoading() {
-  const loading = document.getElementsByClassName('loadingTxt')
-  if (loading.length) {
-    loading[0].remove()
-  }
-}
-
 /* User infos */
 async function getGitHubProfileInfos() {
   const url = `https://api.github.com/users/carloscunha611`
@@ -147,11 +121,20 @@ formSubmit.init()
 
 /* MENU */
 const menuClose = e => {
-  const menuButton = document.getElementById('menubutton')
   const aside = document.getElementById('aside')
+  const menuButton = document.getElementById('menubutton')
   menuButton.classList.toggle('close')
   aside.classList.toggle('navBar-close')
 }
+
+const invisibleView = document.querySelector('.invisibleView')
+invisibleView.addEventListener('click', e => {
+  const menuButton = document.getElementById('menubutton')
+  const aside = document.getElementById('aside')
+
+  menuButton.classList.toggle('close')
+  aside.classList.toggle('navBar-close')
+})
 
 const aside = document.getElementById('aside')
 const navHeight = aside.offsetHeight
@@ -226,4 +209,16 @@ imagens.forEach(function (imagem) {
   element.addEventListener('mouseout', function () {
     element.setAttribute('src', imagem.imagemUrl)
   })
+})
+
+/* swiper */
+const swiper = new Swiper('.swiper', {
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  }
 })

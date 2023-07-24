@@ -13,15 +13,25 @@
       rel="stylesheet"
     />
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+
+    <link
       rel="shortcut icon"
       href="./src/assets/favicon.png"
       type="image/x-icon"
     />
     <link rel="stylesheet" href="./src/style/style.css" />
-    <title>Carlos Cunha | Desenvolvedor Front End</title>
+    <title>Carlos Cunha | Desenvolvedor Web (Front End)</title>
   </head>
   <body>
     <aside id="aside" class="navBar-close close">
+      <div class="invisibleView"></div>
       <nav class="navBar" id="navBar">
         <div id="menubutton" class="close">
           <ion-icon
@@ -177,9 +187,13 @@
             </button>
           </div>
         </div>
-        <div class="web-sites">
-          <ul class="site-list">
-            <li class="active">
+        <div
+          class="web-sites swiper"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+        >
+          <ul class="site-list swiper-wrapper">
+            <li class="active swiper-slide">
               <div class="details">
                 <img
                   class="web-site-icon"
@@ -197,6 +211,21 @@
                     alt="ihuul"
                     srcset="imagem do ihuul"
                   />
+
+                  <ul class="miniTechs">
+                    <li>
+                      <i class="devicon-html5-plain"></i>
+                    </li>
+                    <li>
+                      <i class="devicon-css3-plain"></i>
+                    </li>
+                    <li>
+                      <i class="devicon-javascript-plain"></i>
+                    </li>
+                    <li>
+                      <i class="devicon-sass-original"></i>
+                    </li>
+                  </ul>
                 </div>
               </div>
               <button class="web-site-button">
@@ -227,6 +256,18 @@
                     alt="Master Chief Collection"
                     srcset="imagem do site do halo master chief collection"
                   />
+
+                  <ul class="miniTechs">
+                    <li>
+                      <i class="devicon-html5-plain"></i>
+                    </li>
+                    <li>
+                      <i class="devicon-css3-plain"></i>
+                    </li>
+                    <li>
+                      <i class="devicon-javascript-plain"></i>
+                    </li>
+                  </ul>
                 </div>
                 <div class="web-site-name">
                   <p class="site-name">Master Chief Collection</p>
@@ -260,6 +301,17 @@
                     alt="imagem do site beautysalon."
                     srcset=""
                   />
+                  <ul class="miniTechs">
+                    <li>
+                      <i class="devicon-html5-plain"></i>
+                    </li>
+                    <li>
+                      <i class="devicon-css3-plain"></i>
+                    </li>
+                    <li>
+                      <i class="devicon-javascript-plain"></i>
+                    </li>
+                  </ul>
                 </div>
                 <div class="web-site-name">
                   <p class="site-name">beautysalon.</p>
@@ -293,6 +345,23 @@
                     alt="imagem do site Project Falcon"
                     srcset=""
                   />
+                  <ul class="miniTechs">
+                    <li>
+                      <i class="devicon-html5-plain"></i>
+                    </li>
+                    <li>
+                      <i class="devicon-css3-plain"></i>
+                    </li>
+                    <li>
+                      <i class="devicon-javascript-plain"></i>
+                    </li>
+                    <li>
+                      <i class="devicon-sass-original"></i>
+                    </li>
+                    <li>
+                      <i class="devicon-bootstrap-plain"></i>
+                    </li>
+                  </ul>
                 </div>
                 <div class="web-site-name">
                   <p class="site-name">Project Falcon</p>
@@ -326,6 +395,17 @@
                     alt="imagem do site habits"
                     srcset=""
                   />
+                  <ul class="miniTechs">
+                    <li>
+                      <i class="devicon-html5-plain"></i>
+                    </li>
+                    <li>
+                      <i class="devicon-css3-plain"></i>
+                    </li>
+                    <li>
+                      <i class="devicon-javascript-plain"></i>
+                    </li>
+                  </ul>
                 </div>
                 <div class="web-site-name">
                   <p class="site-name">habits</p>
@@ -345,6 +425,9 @@
               </button>
             </li>
           </ul>
+          <div class="swiper-pagination pagination"></div>
+          <button class="swiper-button-prev button-prev-next"></button>
+          <button class="swiper-button-next button-prev-next"></button>
         </div>
       </section>
 
@@ -363,10 +446,11 @@
                   primeira oportunidade e me especializar como desenvolvedor
                   Full Stack.
                 </li>
-                <li >
-                  <span>-</span> Design responsivo e
-                  princípios de usabilidade.<br />
-                  <span>-</span>Tratamento de erros, Exp. Regulares, Prog. Assíncrona, etc...<br />
+                <li>
+                  <span>-</span> Design responsivo e princípios de
+                  usabilidade.<br />
+                  <span>-</span>Tratamento de erros, Exp. Regulares, Prog.
+                  Assíncrona, etc...<br />
                   <span>-</span> Versionamento de projetos com GIT e GITHUB.<br />
                   <span>-</span> Criação de código limpo, legível.
                 </li>
@@ -376,12 +460,18 @@
                 </li>
                 <li>
                   <span>Cursando:</span> Fullstack Proficional JavaScript -
-                  <a class="linkOBC" href="https://onebitcode.com/lp/" target="_blank"
+                  <a
+                    class="linkOBC"
+                    href="https://onebitcode.com/lp/"
+                    target="_blank"
                     >OneBitCode</a
                   >.
                 </li>
                 <li>
-                  <a class="linkC" href="https://www.figma.com/file/BnPgDCv7za8HVuN6C0N1aB/curriculo-(current)?type=design&node-id=313%3A114&mode=design&t=vmh6HcJNOh8uL17q-1" target="_blank"
+                  <a
+                    class="linkC"
+                    href="https://www.figma.com/file/BnPgDCv7za8HVuN6C0N1aB/curriculo-(current)?type=design&node-id=313%3A114&mode=design&t=vmh6HcJNOh8uL17q-1"
+                    target="_blank"
                     >Ver currículo</a
                   >.
                 </li>
@@ -412,6 +502,13 @@
 
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
+                  />
+                </li>
+                <li class="stack">
+                  <span>react</span>
+
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
                   />
                 </li>
                 <li class="stack">
@@ -481,7 +578,7 @@
                 required
                 id="mensage"
                 name="mensage"
-                placeholder="Digite sua mensagem, proposta,sugestão ou crítica aqui."
+                placeholder="Digite sua mensagem, proposta, sugestão ou crítica aqui."
               ></textarea>
               <button class="contact button-contact" type="submit" data-button>
                 Enviar
@@ -494,18 +591,23 @@
           <div class="socials">
             <ul class="links">
               <li>
-                <a href="https://www.linkedin.com/in/carloscunha611/" target="_blank"
+                <a
+                  href="https://www.linkedin.com/in/carloscunha611/"
+                  target="_blank"
                   ><ion-icon name="logo-linkedin"></ion-icon
                 ></a>
               </li>
               <li>
                 <a href="https://github.com/carloscunha611" target="_blank"
-                  ><ion-icon name="logo-github"></ion-icon></ion-icon
+                  ><ion-icon name="logo-github"></ion-icon
                 ></a>
               </li>
               <li>
-                <a href="https://www.instagram.com/carloscunhajr_/" target="_blank"
-                  ><ion-icon name="logo-instagram"></ion-icon></a>
+                <a
+                  href="https://www.instagram.com/carloscunhajr_/"
+                  target="_blank"
+                  ><ion-icon name="logo-instagram"></ion-icon
+                ></a>
               </li>
             </ul>
           </div>
@@ -531,7 +633,7 @@
     </footer>
 
     <!-- scripts -->
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"

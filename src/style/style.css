@@ -4,6 +4,7 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
   list-style: none;
   font-family: "Rubik", sans-serif;
   text-decoration: none;
@@ -15,6 +16,11 @@
 }
 * a {
   text-decoration: none;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 body .loading,
@@ -74,6 +80,13 @@ aside {
   right: auto;
   font-family: "Rubik", sans-serif;
   z-index: 1994;
+}
+aside .invisibleView {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: transparent;
 }
 aside .navBar {
   flex-direction: column;
@@ -305,7 +318,6 @@ main .section-screen {
   min-height: 100vh;
   padding: 1rem 4rem;
   border-bottom: 2px dotted #cecece;
-  /* overflow: hidden; */
 }
 main .txt-area h1 {
   user-select: none;
@@ -460,21 +472,26 @@ main #portfolio div p {
 main #portfolio .web-sites {
   width: 100%;
   height: 24rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
 }
 main #portfolio .web-sites .site-list {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  flex-wrap: wrap;
   padding-left: 0rem;
   height: 100%;
   width: 100%;
-  gap: 2rem;
+  gap: 1.5rem;
+  transition: transform 0.3s ease;
 }
 main #portfolio .web-sites .site-list li.active {
   width: 12rem;
   height: 16rem;
+  flex: 0 0 200px;
 }
 main #portfolio .web-sites .site-list li.active .details {
   display: flex;
@@ -517,15 +534,40 @@ main #portfolio .web-sites .site-list li.active .details .web-site-icon {
   max-width: 2rem;
 }
 main #portfolio .web-sites .site-list li.active .details .moldura {
-  width: 90%;
-  height: 10rem;
-  outline: 2px solid rgba(206, 206, 206, 0.5019607843);
+  display: grid;
+  width: 100%;
+  height: 13.5rem;
+  border: 2px 3px solid rgba(206, 206, 206, 0.5019607843);
+  margin-top: 2.2rem;
   transition: 0.3s ease-out;
+  overflow: hidden;
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
 }
 main #portfolio .web-sites .site-list li.active .details .moldura img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+main #portfolio .web-sites .site-list li.active .details .moldura .miniTechs,
+main #portfolio .web-sites .site-list li.active .details .moldura .miniTechs li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main #portfolio .web-sites .site-list li.active .details .moldura .miniTechs {
+  position: absolute;
+  width: 12.29rem;
+  height: 2rem;
+  gap: 0.5rem;
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+  background: linear-gradient(to right, #1f1f1f, rgba(31, 31, 31, 0.5019607843));
+  bottom: 0rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
+}
+main #portfolio .web-sites .site-list li.active .details .moldura .miniTechs li {
+  height: 100%;
+  width: 1.5rem;
 }
 main #portfolio .web-sites .site-list li.active .web-site-button {
   display: flex;
@@ -556,6 +598,13 @@ main #portfolio .web-sites .site-list li.active:hover .details .web-site-icon, m
 main #portfolio .web-sites .site-list li.active:hover .details .moldura, main #portfolio .web-sites .site-list li.active:focus .details .moldura {
   border-color: #f2ce66;
 }
+main #portfolio .web-sites .site-list li.active:hover .details .moldura .miniTechs, main #portfolio .web-sites .site-list li.active:focus .details .moldura .miniTechs {
+  height: 3rem;
+}
+main #portfolio .web-sites .site-list li.active:hover .details .moldura .miniTechs li, main #portfolio .web-sites .site-list li.active:focus .details .moldura .miniTechs li {
+  padding-top: 0.5rem;
+  align-items: start;
+}
 main #portfolio .web-sites .site-list li.active:hover .web-site-button, main #portfolio .web-sites .site-list li.active:focus .web-site-button {
   transform: translate(0%, 275%);
   border-color: #f2ce66;
@@ -581,11 +630,38 @@ main #portfolio .web-sites .site-list li.active:nth-child(even):hover .web-site-
 main #portfolio .web-sites .site-list li.active:nth-child(even):hover .web-site-button a:hover {
   color: #f2ce66;
 }
+main #portfolio .web-sites .pagination {
+  position: absolute;
+  left: 50%;
+}
+main #portfolio .web-sites .swiper-pagination-bullet {
+  background: linear-gradient(90deg, #f2ce66 38.56%, #108944 67.55%);
+}
+main #portfolio .web-sites .swiper-pagination-bullet-active:nth-child(odd) {
+  background: #f2ce66;
+}
+main #portfolio .web-sites .swiper-pagination-bullet-active:nth-child(even) {
+  background: #108944;
+}
+main #portfolio .web-sites .button-prev-next {
+  background: transparent;
+  border: none;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  color: #108944;
+  transition: all 0.3s ease-in-out;
+}
+main #portfolio .web-sites .button-prev-next:hover {
+  color: #f2ce66;
+  background: linear-gradient(to right, #1f1f1f, rgba(31, 31, 31, 0.5019607843));
+}
 main #about .informations {
   display: flex;
   height: 32rem;
   width: 100%;
   margin-top: 1rem;
+  padding: 2rem 0;
 }
 main #about .informations ul {
   display: flex;
@@ -618,6 +694,9 @@ main #about .informations .infos li .linkOBC {
 main #about .informations .infos li .linkC {
   color: #108944;
 }
+main #about .informations .infos li a:hover {
+  text-decoration: underline;
+}
 main #about .informations .infos:hover {
   border-color: #cecece;
 }
@@ -630,7 +709,7 @@ main #about .informations .techs .stack-list {
   align-items: center;
   border-radius: 50%;
   flex-wrap: wrap;
-  gap: 4rem;
+  gap: 2rem;
 }
 main #about .informations .techs .stack {
   position: relative;
@@ -992,7 +1071,7 @@ footer .socialFooter :hover {
     gap: 2rem;
   }
   main .txt-area p {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   main .txt-area ul fieldset {
     font-size: 1.5rem;
@@ -1028,15 +1107,47 @@ footer .socialFooter :hover {
   main #welcome .contact:focus a, main #welcome .contact:focus-visible a {
     color: #f2ce66;
   }
+  main #portfolio {
+    min-height: 32rem;
+  }
   main #portfolio .button {
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
   }
+  main #portfolio::after {
+    content: ">>";
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    right: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+  }
+  main #portfolio::before {
+    content: "<<";
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    left: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+  }
   main #portfolio .web-sites {
-    height: fit-content;
+    top: 12rem;
+    left: 0;
+    padding: 0 0.5rem;
+    position: absolute;
+    height: 16rem;
   }
   main #portfolio .web-sites .site-list {
+    overflow-x: auto;
+    height: 100%;
+    padding: 0;
     margin-top: 1rem;
     gap: 0.5rem;
   }
@@ -1048,11 +1159,20 @@ footer .socialFooter :hover {
     width: 1rem;
   }
   main #portfolio .web-sites .site-list li.active .details .moldura {
+    margin-top: 0;
     height: 8rem;
+    border-radius: 0rem 0rem 0rem 0rem;
+  }
+  main #portfolio .web-sites .site-list li.active .details .moldura img {
+    height: 8rem;
+  }
+  main #portfolio .web-sites .site-list li.active .details .moldura .miniTechs {
+    bottom: 2.9rem;
+    border-radius: 0rem 0rem 0rem 0rem;
   }
   main #portfolio .web-sites .site-list li.active .web-site-button {
     position: absolute;
-    transform: translate(0%, 185%);
+    transform: translate(0%, 190%);
     background: transparent;
     border: none;
     backdrop-filter: none;
@@ -1060,7 +1180,14 @@ footer .socialFooter :hover {
     opacity: 1;
   }
   main #portfolio .web-sites .site-list li.active:hover .web-site-button, main #portfolio .web-sites .site-list li.active:focus .web-site-button {
-    transform: translate(0%, 185%);
+    transform: translate(0%, 190%);
+  }
+  main #portfolio .web-sites .site-list li.active:hover .details .moldura .miniTechs, main #portfolio .web-sites .site-list li.active:focus .details .moldura .miniTechs {
+    height: 2rem;
+  }
+  main #portfolio .web-sites .site-list li.active:hover .details .moldura .miniTechs li, main #portfolio .web-sites .site-list li.active:focus .details .moldura .miniTechs li {
+    padding-top: 0rem;
+    align-items: center;
   }
   main #about {
     height: fit-content;
