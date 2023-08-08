@@ -668,7 +668,7 @@ main #about .informations ul {
   justify-content: center;
   width: 100%;
   height: 100%;
-  gap: 2rem;
+  gap: 1rem;
 }
 main #about .informations .infos {
   padding: 2rem;
@@ -690,6 +690,9 @@ main #about .informations .infos li span {
 }
 main #about .informations .infos li .linkOBC {
   color: #ff0044;
+}
+main #about .informations .infos li .linkBeway {
+  color: #bc1e72;
 }
 main #about .informations .infos li .linkC {
   color: #108944;
