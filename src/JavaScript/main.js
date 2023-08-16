@@ -198,6 +198,31 @@ const imagens = [
     id: 'websiteImage8',
     imagemUrl: './src/assets/icons/habits-bg1.png',
     gifUrl: './src/assets/icons/gifs/habits-gif.gif'
+  },
+  {
+    id: 'websiteImage9',
+    imagemUrl: './src/assets/icons/halley-bg1.png',
+    gifUrl: './src/assets/icons/gifs/halley-gif.gif'
+  },
+  {
+    id: 'websiteImage10',
+    imagemUrl: './src/assets/icons/quizz-bg1.png',
+    gifUrl: './src/assets/icons/gifs/quizz-gif.gif'
+  },
+  {
+    id: 'websiteImage11',
+    imagemUrl: './src/assets/icons/cookEasy-bg1.png',
+    gifUrl: './src/assets/icons/gifs/cookEasy-gif.gif'
+  },
+  {
+    id: 'websiteImage12',
+    imagemUrl: './src/assets/icons/noteHub-bg1.png',
+    gifUrl: './src/assets/icons/gifs/noteHub-gif.gif'
+  },
+  {
+    id: 'websiteImage13',
+    imagemUrl: './src/assets/icons/tasks-bg1.png',
+    gifUrl: './src/assets/icons/gifs/tasks-gif.gif'
   }
 ]
 
@@ -211,14 +236,20 @@ imagens.forEach(function (imagem) {
   })
 })
 
-/* swiper */
-const swiper = new Swiper('.swiper', {
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
+/* swiper / portfolio responsive */
+
+function responsive1200() {
+  if (window.innerWidth >= 1200) {
+    const swiper = new Swiper('.swiper', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      }
+    })
   }
-})
+}
+responsive1200()

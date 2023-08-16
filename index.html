@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./src/JavaScript/main.js" defer></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,9 +36,9 @@
       <nav class="navBar" id="navBar">
         <div id="menubutton" class="close">
           <ion-icon
+            name="chevron-back"
             onclick="menuClose()"
             class="button-close"
-            name="chevron-back"
           ></ion-icon>
           <ion-icon
             onclick="menuClose()"
@@ -192,239 +193,468 @@
           data-aos="fade-up"
           data-aos-anchor-placement="top-bottom"
         >
-          <ul class="site-list swiper-wrapper">
-            <li class="active swiper-slide">
-              <div class="details">
-                <img
-                  class="web-site-icon"
-                  src="./src/assets/icons/ihuul.png"
-                  alt="icone do ihuul"
-                />
-                <div class="web-site-name">
-                  <p class="site-name">ihuul</p>
-                </div>
-
-                <div class="moldura">
+          <ul id="containerSiteList" class="container-site-list swiper-wrapper">
+            <li class="site-list swiper-slide">
+              <div class="active">
+                <div class="details">
                   <img
-                    id="websiteImage1"
-                    src="./src/assets/icons/ihuul-bg1.png"
-                    alt="ihuul"
-                    srcset="imagem do ihuul"
+                    class="web-site-icon"
+                    src="./src/assets/icons/ihuul.png"
+                    alt="icone do ihuul"
+                  />
+                  <div class="web-site-name">
+                    <p class="site-name">ihuul</p>
+                  </div>
+
+                  <div class="moldura">
+                    <img
+                      id="websiteImage1"
+                      src="./src/assets/icons/ihuul-bg1.png"
+                      alt="ihuul"
+                      srcset="imagem do ihuul"
+                    />
+
+                    <ul class="miniTechs">
+                      <li>
+                        <i class="devicon-html5-plain"></i>
+                      </li>
+                      <li>
+                        <i class="devicon-css3-plain"></i>
+                      </li>
+                      <li>
+                        <i class="devicon-javascript-plain"></i>
+                      </li>
+                      <li>
+                        <i class="devicon-sass-original"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <button class="web-site-button">
+                  <a
+                    href="https://carloscunha611.github.io/ihuul/"
+                    target="_blank"
+                    ><ion-icon name="open-outline"></ion-icon
+                  ></a>
+                  <a
+                    href="https://github.com/carloscunha611/ihuul"
+                    target="_blank"
+                    ><ion-icon name="logo-github"></ion-icon
+                  ></a>
+                </button>
+              </div>
+              <div class="active">
+                <div class="details">
+                  <img
+                    class="web-site-icon"
+                    src="./src/assets/icons/halo-mcc.png"
+                    alt="icone do site do halo master chief collection"
                   />
 
-                  <ul class="miniTechs">
-                    <li>
-                      <i class="devicon-html5-plain"></i>
-                    </li>
-                    <li>
-                      <i class="devicon-css3-plain"></i>
-                    </li>
-                    <li>
-                      <i class="devicon-javascript-plain"></i>
-                    </li>
-                    <li>
-                      <i class="devicon-sass-original"></i>
-                    </li>
-                  </ul>
+                  <div class="moldura">
+                    <img
+                      id="websiteImage2"
+                      src="./src/assets/icons/halo-bg1.png"
+                      alt="Master Chief Collection"
+                      srcset="imagem do site do halo master chief collection"
+                    />
+
+                    <ul class="miniTechs">
+                      <li>
+                        <i class="devicon-html5-plain"></i>
+                      </li>
+                      <li>
+                        <i class="devicon-css3-plain"></i>
+                      </li>
+                      <li>
+                        <i class="devicon-javascript-plain"></i>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="web-site-name">
+                    <p class="site-name">Master Chief Collection</p>
+                  </div>
                 </div>
+                <button class="web-site-button">
+                  <a
+                    href="https://carloscunha611.github.io/halo-masterChiefCollection/"
+                    target="_blank"
+                    ><ion-icon name="open-outline"></ion-icon
+                  ></a>
+                  <a
+                    href="https://github.com/carloscunha611/halo-masterChiefCollection"
+                    target="_blank"
+                    ><ion-icon name="logo-github"></ion-icon
+                  ></a>
+                </button>
               </div>
-              <button class="web-site-button">
-                <a
-                  href="https://carloscunha611.github.io/ihuul/"
-                  target="_blank"
-                  ><ion-icon name="open-outline"></ion-icon
-                ></a>
-                <a
-                  href="https://github.com/carloscunha611/ihuul"
-                  target="_blank"
-                  ><ion-icon name="logo-github"></ion-icon
-                ></a>
-              </button>
+              <div class="active">
+                <div class="details">
+                  <img
+                    class="web-site-icon"
+                    src="./src/assets/icons/bs.png"
+                    alt="icone do site beautysalon."
+                  />
+
+                  <div class="moldura">
+                    <img
+                      id="websiteImage3"
+                      src="./src/assets/icons/bs-bg1.png"
+                      alt="imagem do site beautysalon."
+                      srcset=""
+                    />
+                    <ul class="miniTechs">
+                      <li>
+                        <i class="devicon-html5-plain"></i>
+                      </li>
+                      <li>
+                        <i class="devicon-css3-plain"></i>
+                      </li>
+                      <li>
+                        <i class="devicon-javascript-plain"></i>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="web-site-name">
+                    <p class="site-name">beautysalon.</p>
+                  </div>
+                </div>
+                <button class="web-site-button">
+                  <a
+                    href="https://carloscunha611.github.io/beautysalon/"
+                    target="_blank"
+                    ><ion-icon name="open-outline"></ion-icon
+                  ></a>
+                  <a
+                    href="https://github.com/carloscunha611/beautysalon"
+                    target="_blank"
+                    ><ion-icon name="logo-github"></ion-icon
+                  ></a>
+                </button>
+              </div>
+              <div class="active">
+                <div class="details">
+                  <img
+                    class="web-site-icon"
+                    src="./src/assets/icons/projectFalcon.png"
+                    alt="icone do project falcon"
+                  />
+
+                  <div class="moldura">
+                    <img
+                      id="websiteImage4"
+                      src="./src/assets/icons/projectFalcon-bg1.png"
+                      alt="imagem do site Project Falcon"
+                      srcset=""
+                    />
+                    <ul class="miniTechs">
+                      <li>
+                        <i class="devicon-html5-plain"></i>
+                      </li>
+                      <li>
+                        <i class="devicon-css3-plain"></i>
+                      </li>
+                      <li>
+                        <i class="devicon-javascript-plain"></i>
+                      </li>
+                      <li>
+                        <i class="devicon-sass-original"></i>
+                      </li>
+                      <li>
+                        <i class="devicon-bootstrap-plain"></i>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="web-site-name">
+                    <p class="site-name">Project Falcon</p>
+                  </div>
+                </div>
+                <button class="web-site-button">
+                  <a
+                    href="https://carloscunha611.github.io/oneBitX/"
+                    target="_blank"
+                    ><ion-icon name="open-outline"></ion-icon
+                  ></a>
+                  <a
+                    href="https://github.com/carloscunha611/oneBitX"
+                    target="_blank"
+                    ><ion-icon name="logo-github"></ion-icon
+                  ></a>
+                </button>
+              </div>
+              <div class="active">
+                <div class="details">
+                  <img
+                    class="web-site-icon"
+                    src="./src/assets/icons/habits.png"
+                    alt="icone do site habits"
+                  />
+
+                  <div class="moldura">
+                    <img
+                      id="websiteImage8"
+                      src="./src/assets/icons/habits-bg1.png"
+                      alt="imagem do site habits"
+                      srcset=""
+                    />
+                    <ul class="miniTechs">
+                      <li>
+                        <i class="devicon-html5-plain"></i>
+                      </li>
+                      <li>
+                        <i class="devicon-css3-plain"></i>
+                      </li>
+                      <li>
+                        <i class="devicon-javascript-plain"></i>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="web-site-name">
+                    <p class="site-name">habits</p>
+                  </div>
+                </div>
+                <button class="web-site-button">
+                  <a
+                    href="https://carloscunha611.github.io/habits/"
+                    target="_blank"
+                    ><ion-icon name="open-outline"></ion-icon
+                  ></a>
+                  <a
+                    href="https://github.com/carloscunha611/habits"
+                    target="_blank"
+                    ><ion-icon name="logo-github"></ion-icon
+                  ></a>
+                </button>
+              </div>
             </li>
-            <li class="active">
-              <div class="details">
-                <img
-                  class="web-site-icon"
-                  src="./src/assets/icons/halo-mcc.png"
-                  alt="icone do site do halo master chief collection"
-                />
 
-                <div class="moldura">
+            <li class="site-list swiper-slide">
+              <div class="active">
+                <div class="details">
                   <img
-                    id="websiteImage2"
-                    src="./src/assets/icons/halo-bg1.png"
-                    alt="Master Chief Collection"
-                    srcset="imagem do site do halo master chief collection"
+                    class="web-site-icon"
+                    src="./src/assets/icons/halley.png"
+                    alt="icone do site halley"
                   />
 
-                  <ul class="miniTechs">
-                    <li>
-                      <i class="devicon-html5-plain"></i>
-                    </li>
-                    <li>
-                      <i class="devicon-css3-plain"></i>
-                    </li>
-                    <li>
-                      <i class="devicon-javascript-plain"></i>
-                    </li>
-                  </ul>
+                  <div class="moldura">
+                    <img
+                      id="websiteImage9"
+                      src="./src/assets/icons/halley-bg1.png"
+                      alt="imagem do site habits"
+                      srcset=""
+                    />
+                    <ul class="miniTechs">
+                      <li>
+                        <i class="devicon-html5-plain"></i>
+                      </li>
+                      <li>
+                        <i class="devicon-css3-plain"></i>
+                      </li>
+                      <li>
+                        <i class="devicon-javascript-plain"></i>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="web-site-name">
+                    <p class="site-name">Halley</p>
+                  </div>
                 </div>
-                <div class="web-site-name">
-                  <p class="site-name">Master Chief Collection</p>
-                </div>
+                <button class="web-site-button">
+                  <a
+                    href="https://carloscunha611.github.io/countdown-timer/"
+                    target="_blank"
+                    ><ion-icon name="open-outline"></ion-icon
+                  ></a>
+                  <a
+                    href="https://github.com/carloscunha611/countdown-timer"
+                    target="_blank"
+                    ><ion-icon name="logo-github"></ion-icon
+                  ></a>
+                </button>
               </div>
-              <button class="web-site-button">
-                <a
-                  href="https://carloscunha611.github.io/halo-masterChiefCollection/"
-                  target="_blank"
-                  ><ion-icon name="open-outline"></ion-icon
-                ></a>
-                <a
-                  href="https://github.com/carloscunha611/halo-masterChiefCollection"
-                  target="_blank"
-                  ><ion-icon name="logo-github"></ion-icon
-                ></a>
-              </button>
-            </li>
-            <li class="active">
-              <div class="details">
-                <img
-                  class="web-site-icon"
-                  src="./src/assets/icons/bs.png"
-                  alt="icone do site beautysalon."
-                />
-
-                <div class="moldura">
+              <div class="active">
+                <div class="details">
                   <img
-                    id="websiteImage3"
-                    src="./src/assets/icons/bs-bg1.png"
-                    alt="imagem do site beautysalon."
-                    srcset=""
+                    class="web-site-icon"
+                    src="./src/assets/icons/quizz.png"
+                    alt="icone do site quizz"
                   />
-                  <ul class="miniTechs">
-                    <li>
-                      <i class="devicon-html5-plain"></i>
-                    </li>
-                    <li>
-                      <i class="devicon-css3-plain"></i>
-                    </li>
-                    <li>
-                      <i class="devicon-javascript-plain"></i>
-                    </li>
-                  </ul>
-                </div>
-                <div class="web-site-name">
-                  <p class="site-name">beautysalon.</p>
-                </div>
-              </div>
-              <button class="web-site-button">
-                <a
-                  href="https://carloscunha611.github.io/beautysalon/"
-                  target="_blank"
-                  ><ion-icon name="open-outline"></ion-icon
-                ></a>
-                <a
-                  href="https://github.com/carloscunha611/beautysalon"
-                  target="_blank"
-                  ><ion-icon name="logo-github"></ion-icon
-                ></a>
-              </button>
-            </li>
-            <li class="active">
-              <div class="details">
-                <img
-                  class="web-site-icon"
-                  src="./src/assets/icons/projectFalcon.png"
-                  alt="icone do project falcon"
-                />
 
-                <div class="moldura">
-                  <img
-                    id="websiteImage4"
-                    src="./src/assets/icons/projectFalcon-bg1.png"
-                    alt="imagem do site Project Falcon"
-                    srcset=""
-                  />
-                  <ul class="miniTechs">
-                    <li>
-                      <i class="devicon-html5-plain"></i>
-                    </li>
-                    <li>
-                      <i class="devicon-css3-plain"></i>
-                    </li>
-                    <li>
-                      <i class="devicon-javascript-plain"></i>
-                    </li>
-                    <li>
-                      <i class="devicon-sass-original"></i>
-                    </li>
-                    <li>
-                      <i class="devicon-bootstrap-plain"></i>
-                    </li>
-                  </ul>
+                  <div class="moldura">
+                    <img
+                      id="websiteImage10"
+                      src="./src/assets/icons/quizz-bg1.png"
+                      alt="imagem do site quizz"
+                      srcset=""
+                    />
+                    <ul class="miniTechs">
+                      <li>
+                        <i class="devicon-html5-plain"></i>
+                      </li>
+                      <li>
+                        <i class="devicon-css3-plain"></i>
+                      </li>
+                      <li>
+                        <i class="devicon-javascript-plain"></i>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="web-site-name">
+                    <p class="site-name">Quizz</p>
+                  </div>
                 </div>
-                <div class="web-site-name">
-                  <p class="site-name">Project Falcon</p>
-                </div>
+                <button class="web-site-button">
+                  <a
+                    href="https://carloscunha611.github.io/quiz-app/"
+                    target="_blank"
+                    ><ion-icon name="open-outline"></ion-icon
+                  ></a>
+                  <a
+                    href="https://github.com/carloscunha611/quiz-app"
+                    target="_blank"
+                    ><ion-icon name="logo-github"></ion-icon
+                  ></a>
+                </button>
               </div>
-              <button class="web-site-button">
-                <a
-                  href="https://carloscunha611.github.io/oneBitX/"
-                  target="_blank"
-                  ><ion-icon name="open-outline"></ion-icon
-                ></a>
-                <a
-                  href="https://github.com/carloscunha611/oneBitX"
-                  target="_blank"
-                  ><ion-icon name="logo-github"></ion-icon
-                ></a>
-              </button>
-            </li>
-            <li class="active">
-              <div class="details">
-                <img
-                  class="web-site-icon"
-                  src="./src/assets/icons/habits.png"
-                  alt="icone do site habits"
-                />
+              <div class="active">
+                <div class="details">
+                  <img
+                    class="web-site-icon"
+                    src="./src/assets/icons/cookEasy.png"
+                    alt="icone do site cookEase"
+                  />
 
-                <div class="moldura">
-                  <img
-                    id="websiteImage8"
-                    src="./src/assets/icons/habits-bg1.png"
-                    alt="imagem do site habits"
-                    srcset=""
-                  />
-                  <ul class="miniTechs">
-                    <li>
-                      <i class="devicon-html5-plain"></i>
-                    </li>
-                    <li>
-                      <i class="devicon-css3-plain"></i>
-                    </li>
-                    <li>
-                      <i class="devicon-javascript-plain"></i>
-                    </li>
-                  </ul>
+                  <div class="moldura">
+                    <img
+                      id="websiteImage11"
+                      src="./src/assets/icons/cookEasy-bg1.png"
+                      alt="imagem do site cookEasy"
+                      srcset=""
+                    />
+                    <ul class="miniTechs">
+                      <li>
+                        <i class="devicon-html5-plain"></i>
+                      </li>
+                      <li>
+                        <i class="devicon-css3-plain"></i>
+                      </li>
+                      <li>
+                        <i class="devicon-javascript-plain"></i>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="web-site-name">
+                    <p class="site-name">Cook Easy</p>
+                  </div>
                 </div>
-                <div class="web-site-name">
-                  <p class="site-name">habits</p>
-                </div>
+                <button class="web-site-button">
+                  <a
+                    href="https://carloscunha611.github.io/recipe-app/"
+                    target="_blank"
+                    ><ion-icon name="open-outline"></ion-icon
+                  ></a>
+                  <a
+                    href="https://github.com/carloscunha611/recipe-app"
+                    target="_blank"
+                    ><ion-icon name="logo-github"></ion-icon
+                  ></a>
+                </button>
               </div>
-              <button class="web-site-button">
-                <a
-                  href="https://carloscunha611.github.io/habits/"
-                  target="_blank"
-                  ><ion-icon name="open-outline"></ion-icon
-                ></a>
-                <a
-                  href="https://github.com/carloscunha611/habits"
-                  target="_blank"
-                  ><ion-icon name="logo-github"></ion-icon
-                ></a>
-              </button>
+              <div class="active">
+                <div class="details">
+                  <img
+                    class="web-site-icon"
+                    src="./src/assets/icons/noteHub.png"
+                    alt="icone do site cookEase"
+                  />
+
+                  <div class="moldura">
+                    <img
+                      id="websiteImage12"
+                      src="./src/assets/icons/noteHub-bg1.png"
+                      alt="imagem do site noteHub"
+                      srcset=""
+                    />
+                    <ul class="miniTechs">
+                      <li>
+                        <i class="devicon-html5-plain"></i>
+                      </li>
+                      <li>
+                        <i class="devicon-css3-plain"></i>
+                      </li>
+                      <li>
+                        <i class="devicon-javascript-plain"></i>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="web-site-name">
+                    <p class="site-name">NoteHub</p>
+                  </div>
+                </div>
+                <button class="web-site-button">
+                  <a
+                    href="https://carloscunha611.github.io/note-app/"
+                    target="_blank"
+                    ><ion-icon name="open-outline"></ion-icon
+                  ></a>
+                  <a
+                    href="https://github.com/carloscunha611/note-app"
+                    target="_blank"
+                    ><ion-icon name="logo-github"></ion-icon
+                  ></a>
+                </button>
+              </div>
+              <div class="active">
+                <div class="details">
+                  <img
+                    class="web-site-icon"
+                    src="./src/assets/icons/tasks.png"
+                    alt="icone do site cookEase"
+                  />
+
+                  <div class="moldura">
+                    <img
+                      id="websiteImage13"
+                      src="./src/assets/icons/tasks-bg1.png"
+                      alt="imagem do site tasks"
+                      srcset=""
+                    />
+                    <ul class="miniTechs">
+                      <li>
+                        <i class="devicon-html5-plain"></i>
+                      </li>
+                      <li>
+                        <i class="devicon-css3-plain"></i>
+                      </li>
+                      <li>
+                        <i class="devicon-javascript-plain"></i>
+                      </li>
+                      <li>
+                        <i class="devicon-bulma-plain"></i>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="web-site-name">
+                    <p class="site-name">Tasks!</p>
+                  </div>
+                </div>
+                <button class="web-site-button">
+                  <a
+                    href="https://carloscunha611.github.io/toDo-app/"
+                    target="_blank"
+                    ><ion-icon name="open-outline"></ion-icon
+                  ></a>
+                  <a
+                    href="https://github.com/carloscunha611/toDo-app"
+                    target="_blank"
+                    ><ion-icon name="logo-github"></ion-icon
+                  ></a>
+                </button>
+              </div>
             </li>
           </ul>
+
           <div class="swiper-pagination pagination"></div>
           <button class="swiper-button-prev button-prev-next"></button>
           <button class="swiper-button-next button-prev-next"></button>
@@ -436,52 +666,73 @@
           <h1><span>S</span>obre</h1>
           <div class="informations">
             <div data-aos="fade-left" class="infos">
-              <ul>
-                <li>
-                  Desenvolvedor web (Front-end) <span>Nivel:</span> Júnior
+              <ul class="info-container">
+                <li class="info-stack">
+                  Desenvolvedor web (Front-end) <span>Nível:</span> Júnior
                 </li>
-                <li>
+                <li class="info-bio">
                   Sou um profissional recentemente formado em Análise e
                   Desenvolvimento de Sistemas, entusiasmado em buscar minha
                   primeira oportunidade e me especializar como desenvolvedor
                   Full Stack.
                 </li>
-                <li>
-                  <span>-</span> Design responsivo e princípios de
-                  usabilidade.<br />
-                  <span>-</span>Tratamento de erros, Exp. Regulares, Prog.
-                  Assíncrona, etc...<br />
-                  <span>-</span> Versionamento de projetos com GIT e GITHUB.<br />
-                  <span>-</span> Criação de código limpo, legível.
+                <li class="info-tags">
+                  <div>
+                    <span>-</span> Design responsivo e princípios de
+                    usabilidade.
+                  </div>
+                  <div>
+                    <span>-</span>Tratamento de erros, Exp. Regulares, Prog.
+                    Assíncrona.
+                  </div>
+                  <div>
+                    <span>-</span> Versionamento de projetos com GIT e GITHUB.
+                  </div>
+                  <div><span>-</span> Criação de código limpo, legível.</div>
+                  <div>
+                    <span>-</span> Conhecimentos básico de automação em python.
+                  </div>
                 </li>
-                <li>
-                  <span>Superior completo:</span> Análise e Desenvolvimento de
-                  Sistemas.
+                <li class="academic">
+                  <span>Superior completo:</span>
+                  <div>
+                    Análise e Desenvolvimento de Sistemas -
+                    <a
+                      class="linkEstacio"
+                      href="https://estacio.br/"
+                      target="_blank"
+                      >Estácio</a
+                    >
+                  </div>
                 </li>
-                <li>
-                  <span>Cursando:</span><br />
-                  Full Stack JavaScript -
-                  <a
-                    class="linkOBC"
-                    href="https://pro.onebitcode.com/"
-                    target="_blank"
-                    >OneBitCode</a
-                  >.<br />
-                  Inglês -
-                  <a
-                    class="linkBeway"
-                    href="https://www.bewayonline.com/"
-                    target="_blank"
-                    >Beway</a
-                  >.
+                <li class="courses">
+                  <span>Cursando:</span>
+                  <div>
+                    Full Stack JavaScript -
+                    <a
+                      class="linkOBC"
+                      href="https://pro.onebitcode.com/"
+                      target="_blank"
+                      >OneBitCode</a
+                    >
+                  </div>
+                  <div>
+                    Inglês -
+                    <a
+                      class="linkBeway"
+                      href="https://www.bewayonline.com/"
+                      target="_blank"
+                      >Beway</a
+                    >
+                  </div>
                 </li>
-                <li>
+                <li class="curriculum">
                   <a
                     class="linkC"
                     href="https://www.figma.com/file/BnPgDCv7za8HVuN6C0N1aB/curriculo-(current)?type=design&node-id=313%3A114&mode=design&t=vmh6HcJNOh8uL17q-1"
                     target="_blank"
                     >Ver currículo</a
-                  >.
+                  >
                 </li>
               </ul>
             </div>
@@ -638,21 +889,28 @@
           >MyHub</a
         >
       </div>
+
+      <p class="rex">
+        Ave Christus Rex.
+        <i class="ph ph-fill ph-cross" style="color: #ccc"></i>
+      </p>
     </footer>
 
     <!-- scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init()
     </script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
