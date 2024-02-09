@@ -11,8 +11,8 @@
   color: #cecece;
 }
 * ::selection {
-  color: #108944;
-  background-color: #f2ce66;
+  color: #1b4db1;
+  background-color: #ffffff;
 }
 * a {
   text-decoration: none;
@@ -103,8 +103,8 @@ aside .navBar #menubutton ion-icon {
   cursor: pointer;
 }
 aside .navBar #menubutton ion-icon:hover {
-  color: #f2ce66;
-  filter: drop-shadow(0.5rem 0rem 0rem #108944);
+  color: #ffffff;
+  filter: drop-shadow(0.5rem 0rem 0rem #1b4db1);
   animation: arrowAnimation-Close infinite 2s ease;
 }
 aside .navBar .perfil {
@@ -121,7 +121,7 @@ aside .navBar .perfil .photo {
   transition: all 0.3s ease-in-out;
 }
 aside .navBar .perfil .photo:hover {
-  box-shadow: -0.3rem 0 0 #f2ce66, -0.5rem 0 0 #108944;
+  box-shadow: -0.3rem 0 0 #ffffff, -0.5rem 0 0 #1b4db1;
 }
 aside .navBar .perfil .nameBio {
   display: flex;
@@ -142,15 +142,15 @@ aside .navBar .perfil .nameBio .name span {
   transition: all 0.3s ease-in-out;
 }
 aside .navBar .perfil .nameBio .name:hover span {
-  filter: drop-shadow(-0.2rem 0 0 #108944);
-  color: #f2ce66;
+  filter: drop-shadow(-0.2rem 0 0 #1b4db1);
+  color: #ffffff;
 }
 aside .navBar .perfil .nameBio .bio {
   font-size: 0.8rem;
   transition: all 0.3s ease-in-out;
 }
 aside .navBar .perfil .nameBio .bio:hover {
-  color: #108944;
+  color: #1b4db1;
 }
 aside .navBar .perfil .nameBio .gitInfos {
   display: flex;
@@ -163,7 +163,7 @@ aside .navBar .perfil .nameBio .gitInfos li {
   width: 2rem;
 }
 aside .navBar .perfil .nameBio .gitInfos li :hover {
-  color: #f2ce66;
+  color: #ffffff;
 }
 aside .navBar .buttons {
   display: grid;
@@ -197,8 +197,8 @@ aside .navBar .buttons .buttonList li a.active {
   border-left: 0.2rem solid rgba(206, 206, 206, 0.5019607843);
 }
 aside .navBar .buttons .buttonList li a.active ion-icon {
-  color: #f2ce66;
-  filter: drop-shadow(-0.3rem 0.3rem 0rem #108944);
+  color: #ffffff;
+  filter: drop-shadow(-0.3rem 0.3rem 0rem #1b4db1);
   animation: shadow 0.3s;
   transition: all 0.3s ease;
 }
@@ -207,8 +207,8 @@ aside .navBar .buttons .buttonList li a:hover {
   border-left: 0.2rem solid rgba(206, 206, 206, 0.5019607843);
 }
 aside .navBar .buttons .buttonList li a:hover ion-icon {
-  color: #f2ce66;
-  filter: drop-shadow(-0.3rem 0.3rem 0rem #108944);
+  color: #ffffff;
+  filter: drop-shadow(-0.3rem 0.3rem 0rem #1b4db1);
   animation: shadow 0.3s;
   transition: all 0.3s ease;
 }
@@ -229,8 +229,8 @@ aside .navBar .social .socialMidiaList li a {
   color: #cecece;
 }
 aside .navBar .social .socialMidiaList li:hover ion-icon {
-  color: #f2ce66;
-  filter: drop-shadow(-0.2rem 0.2rem 0rem #108944);
+  color: #ffffff;
+  filter: drop-shadow(-0.2rem 0.2rem 0rem #1b4db1);
   animation: shadow 0.3s;
   transition: all 0.3s ease;
 }
@@ -254,8 +254,8 @@ aside.navBar-close .navBar #menubutton ion-icon.button-open {
   animation: arrowAnimation-Open infinite 2s ease;
 }
 aside.navBar-close .navBar #menubutton ion-icon.button-open:hover {
-  color: #108944;
-  filter: drop-shadow(0.5rem 0rem 0rem #f2ce66);
+  color: #1b4db1;
+  filter: drop-shadow(0.5rem 0rem 0rem #ffffff);
 }
 aside.navBar-close .navBar .perfil .nameBio {
   display: none;
@@ -267,7 +267,7 @@ aside.navBar-close .navBar .perfil .photo {
   box-shadow: none;
 }
 aside.navBar-close .navBar .perfil .photo:hover {
-  border: 0.2rem solid #108944;
+  border: 0.2rem solid #1b4db1;
 }
 aside.navBar-close .navBar .buttons {
   margin-top: 10rem;
@@ -309,11 +309,11 @@ main .txt-area h1 {
   font-size: 3.5rem;
 }
 main .txt-area h1 span {
-  filter: drop-shadow(-0.2rem 0 0 #108944);
+  filter: drop-shadow(-0.2rem 0 0 #1b4db1);
   transition: all 0.5s ease-in;
 }
 main .txt-area h1 span:hover {
-  color: #f2ce66;
+  color: #ffffff;
 }
 main .txt-area div {
   width: 100%;
@@ -341,14 +341,14 @@ main .txt-area div .button a {
 }
 main .txt-area div .button:hover {
   background: rgba(58, 58, 58, 0.5019607843);
-  box-shadow: 0rem 0.3rem 0rem #108944;
+  box-shadow: 0rem 0.3rem 0rem #1b4db1;
   cursor: pointer;
 }
 main .txt-area div .button:hover a {
-  color: #f2ce66;
+  color: #ffffff;
 }
 main .txt-area div .button:hover[type=submit] {
-  color: #f2ce66;
+  color: #ffffff;
 }
 main .button-contact {
   width: 8rem;
@@ -399,10 +399,10 @@ main .button-contact:active::after {
   transform: translate(0, 5%);
 }
 main .button-contact:hover {
-  color: #f2ce66;
+  color: #ffffff;
 }
 main .button-contact:hover a {
-  color: #f2ce66;
+  color: #ffffff;
 }
 main #welcome {
   background: url("../../src/assets/bg-home.png") top/cover no-repeat;
@@ -417,10 +417,10 @@ main #welcome .txt-welcome {
   height: 75%;
   text-align: center;
   user-select: none;
-  filter: drop-shadow(-0.2rem 0 0 #108944);
+  filter: drop-shadow(-0.2rem 0 0 #1b4db1);
 }
 main #welcome .txt-welcome span {
-  background: linear-gradient(90deg, #f2ce66 38.56%, #f2ce66 67.55%);
+  background: linear-gradient(90deg, #ffffff 38.56%, #ffffff 67.55%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -582,13 +582,13 @@ main #portfolio .web-sites .site-list .active .web-site-button a {
   text-align: center;
 }
 main #portfolio .web-sites .site-list .active:hover .details, main #portfolio .web-sites .site-list .active:focus .details {
-  border-color: #f2ce66;
+  border-color: #ffffff;
 }
 main #portfolio .web-sites .site-list .active:hover .details .web-site-icon, main #portfolio .web-sites .site-list .active:focus .details .web-site-icon {
-  border-color: #f2ce66;
+  border-color: #ffffff;
 }
 main #portfolio .web-sites .site-list .active:hover .details .moldura, main #portfolio .web-sites .site-list .active:focus .details .moldura {
-  border-color: #f2ce66;
+  border-color: #ffffff;
 }
 main #portfolio .web-sites .site-list .active:hover .details .moldura .miniTechs, main #portfolio .web-sites .site-list .active:focus .details .moldura .miniTechs {
   height: 3rem;
@@ -599,41 +599,41 @@ main #portfolio .web-sites .site-list .active:hover .details .moldura .miniTechs
 }
 main #portfolio .web-sites .site-list .active:hover .web-site-button, main #portfolio .web-sites .site-list .active:focus .web-site-button {
   transform: translate(0%, 275%);
-  border-color: #f2ce66;
+  border-color: #ffffff;
   opacity: 1;
 }
 main #portfolio .web-sites .site-list .active:hover .web-site-button a:hover ion-icon, main #portfolio .web-sites .site-list .active:focus .web-site-button a:hover ion-icon {
-  color: #108944;
+  color: #1b4db1;
 }
 main #portfolio .web-sites .site-list .active:nth-child(even):hover .details {
-  border-color: #108944;
+  border-color: #1b4db1;
   box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
 }
 main #portfolio .web-sites .site-list .active:nth-child(even):hover .details .web-site-icon {
-  border-color: #108944;
+  border-color: #1b4db1;
 }
 main #portfolio .web-sites .site-list .active:nth-child(even):hover .details .moldura {
-  border-color: #108944;
+  border-color: #1b4db1;
 }
 main #portfolio .web-sites .site-list .active:nth-child(even):hover .web-site-button {
-  border-color: #108944;
+  border-color: #1b4db1;
   opacity: 1;
 }
 main #portfolio .web-sites .site-list .active:nth-child(even):hover .web-site-button a:hover {
-  color: #f2ce66;
+  color: #ffffff;
 }
 main #portfolio .web-sites .pagination {
   position: absolute;
   left: 45%;
 }
 main #portfolio .web-sites .swiper-pagination-bullet {
-  background: linear-gradient(90deg, #f2ce66 38.56%, #f2ce66 67.55%);
+  background: linear-gradient(90deg, #ffffff 38.56%, #ffffff 67.55%);
 }
 main #portfolio .web-sites .swiper-pagination-bullet-active:nth-child(odd) {
-  background: #f2ce66;
+  background: #ffffff;
 }
 main #portfolio .web-sites .swiper-pagination-bullet-active:nth-child(even) {
-  background: #108944;
+  background: #1b4db1;
 }
 main #portfolio .web-sites .button-prev-next {
   background: transparent;
@@ -641,11 +641,11 @@ main #portfolio .web-sites .button-prev-next {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
-  color: #108944;
+  color: #1b4db1;
   transition: all 0.3s ease-in-out;
 }
 main #portfolio .web-sites .button-prev-next:hover {
-  color: #f2ce66;
+  color: #ffffff;
   background: linear-gradient(to right, #1f1f1f, rgba(31, 31, 31, 0.5019607843));
 }
 main #about .informations {
@@ -665,7 +665,7 @@ main #about .informations ul {
 main #about .informations .infos {
   padding: 1rem;
   width: 50%;
-  height: 100%;
+  height: fit-content;
   border: 4px double rgba(206, 206, 206, 0.5019607843);
   background: linear-gradient(to right, #1f1f1f, rgba(31, 31, 31, 0.5019607843));
 }
@@ -677,7 +677,7 @@ main #about .informations .infos li {
   text-align: center;
 }
 main #about .informations .infos li span {
-  color: #f2ce66;
+  color: #1b4db1;
 }
 main #about .informations .infos li.info-stack {
   padding-bottom: 0.5rem;
@@ -730,7 +730,7 @@ main #about .informations .infos li .linkBeway {
   color: #bc1e72;
 }
 main #about .informations .infos li .linkC {
-  color: #108944;
+  color: #1b4db1;
 }
 main #about .informations .infos li a:hover {
   text-decoration: underline;
@@ -800,10 +800,10 @@ main #about .informations .techs .stack::after {
   z-index: 2;
 }
 main #about .informations .techs .stack:hover:nth-child(odd)::before {
-  background: #f2ce66;
+  background: #ffffff;
 }
 main #about .informations .techs .stack:hover:nth-child(even)::before {
-  background: #108944;
+  background: #1b4db1;
 }
 main #contact .formu {
   width: 100%;
@@ -819,11 +819,11 @@ main #contact .formu form {
 }
 main #contact .formu form .success {
   font-size: 1rem;
-  color: #f2ce66;
+  color: #ffffff;
 }
 main #contact .formu form .success span.success_ {
   filter: none;
-  color: #108944;
+  color: #1b4db1;
 }
 main #contact .formu form .error {
   font-size: 1rem;
@@ -857,7 +857,7 @@ main #contact .formu form button {
   cursor: pointer;
 }
 main #contact .formu form :focus-visible {
-  outline: #f2ce66 solid 1px;
+  outline: #ffffff solid 1px;
 }
 main #contact .formu img {
   width: 50%;
@@ -893,7 +893,7 @@ main .socials .links li a {
 }
 main .socials .links li :hover {
   transition: color 0.3s ease;
-  color: #f2ce66;
+  color: #ffffff;
 }
 
 footer {
@@ -922,13 +922,13 @@ footer span {
   margin-left: 0.5rem;
 }
 footer span:nth-child(1) {
-  color: #f2ce66;
+  color: #ffffff;
 }
 footer span:nth-child(2) {
-  color: #108944;
+  color: #1b4db1;
 }
 footer span:nth-child(3) {
-  color: #f2ce66;
+  color: #ffffff;
 }
 footer .socialFooter {
   display: flex;
@@ -936,7 +936,7 @@ footer .socialFooter {
 }
 footer .socialFooter :hover {
   transition: color 0.3s ease;
-  color: #108944;
+  color: #1b4db1;
 }
 footer .rex {
   user-select: none;
@@ -947,10 +947,10 @@ footer .rex {
     color: #cecece;
   }
   25% {
-    color: #f2ce66;
+    color: #ffffff;
   }
   50% {
-    color: #108944;
+    color: #1b4db1;
   }
   100% {
     color: #cecece;
@@ -991,10 +991,10 @@ footer .rex {
     filter: drop-shadow(0rem 0rem 0rem transparent);
   }
   50% {
-    filter: drop-shadow(-0.1rem 0.1rem 0rem #108944);
+    filter: drop-shadow(-0.1rem 0.1rem 0rem #1b4db1);
   }
   100% {
-    filter: drop-shadow(-0.2rem 0.2rem 0rem #108944);
+    filter: drop-shadow(-0.2rem 0.2rem 0rem #1b4db1);
   }
 }
 @keyframes move-moonStack {
@@ -1082,8 +1082,8 @@ footer .rex {
     border-bottom: 0.2rem solid rgba(206, 206, 206, 0.5019607843);
   }
   .navBar-mobile .buttons .buttonList li:hover ion-icon, .navBar-mobile .buttons .buttonList li:focus ion-icon, .navBar-mobile .buttons .buttonList li:focus-visible ion-icon {
-    color: #f2ce66;
-    filter: drop-shadow(-0.2rem 0.2rem 0rem #108944);
+    color: #ffffff;
+    filter: drop-shadow(-0.2rem 0.2rem 0rem #1b4db1);
     animation: shadow 0.3s;
     transition: all 0.3s ease;
   }
@@ -1143,10 +1143,10 @@ footer .rex {
   }
   main #welcome .contact:focus, main #welcome .contact:focus-visible {
     background: rgba(58, 58, 58, 0.5019607843);
-    box-shadow: 0px 0.3rem 0px #108944;
+    box-shadow: 0px 0.3rem 0px #1b4db1;
   }
   main #welcome .contact:focus a, main #welcome .contact:focus-visible a {
-    color: #f2ce66;
+    color: #ffffff;
   }
   main #portfolio {
     min-height: 32rem;
