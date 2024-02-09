@@ -55,9 +55,7 @@
             alt="Foto do Carlos. Moreno lindo"
           />
           <div class="nameBio">
-            <p class="name" id="userName">
-              <span>C</span>arlos <span>C</span>unha
-            </p>
+            <p class="name" id="userName"><span>C</span>arlos</p>
             <p class="bio" id="userBio"></p>
 
             <ul class="gitInfos">
@@ -163,8 +161,8 @@
         <div class="txt-welcome">
           <h1 class="main-title">
             Olá,<br />
-            eu sou o <span>Carlos</span><br />
-            Desenvolvedor web.
+            eu sou o Carlos<br />
+            <span>software developer</span>.
           </h1>
         </div>
 
@@ -667,14 +665,11 @@
           <div class="informations">
             <div data-aos="fade-left" class="infos">
               <ul class="info-container">
-                <li class="info-stack">
-                  Desenvolvedor web (Front-end) <span>Nível:</span> Júnior
-                </li>
+                <li class="info-stack">Desenvolvedor de software</li>
                 <li class="info-bio">
-                  Sou um profissional recentemente formado em Análise e
-                  Desenvolvimento de Sistemas, entusiasmado em buscar minha
-                  primeira oportunidade e me especializar como desenvolvedor
-                  Full Stack.
+                  Sou um profissional com formação em Análise e Desenvolvimento
+                  de Sistemas, entusiasmado e em buscar de oportunidades para me
+                  especializar como desenvolvedor Full Stack.
                 </li>
                 <li class="info-tags">
                   <div>
@@ -690,41 +685,21 @@
                   </div>
                   <div><span>-</span> Criação de código limpo, legível.</div>
                   <div>
-                    <span>-</span> Conhecimentos básico de automação em python.
+                    <span>-</span> Conhecimentos de automação em python.
+                  </div>
+                  <div>
+                    <span>-</span> Criação de templetes e criativos usando
+                    figma.
                   </div>
                 </li>
                 <li class="academic">
                   <span>Superior completo:</span>
-                  <div>
-                    Análise e Desenvolvimento de Sistemas -
-                    <a
-                      class="linkEstacio"
-                      href="https://estacio.br/"
-                      target="_blank"
-                      >Estácio</a
-                    >
-                  </div>
+                  <div>Análise e Desenvolvimento de Sistemas</div>
                 </li>
                 <li class="courses">
                   <span>Cursando:</span>
-                  <div>
-                    Full Stack JavaScript -
-                    <a
-                      class="linkOBC"
-                      href="https://pro.onebitcode.com/"
-                      target="_blank"
-                      >OneBitCode</a
-                    >
-                  </div>
-                  <div>
-                    Inglês -
-                    <a
-                      class="linkBeway"
-                      href="https://www.bewayonline.com/"
-                      target="_blank"
-                      >Beway</a
-                    >
-                  </div>
+                  <div>Especialização em Full Stack JavaScript</div>
+                  <div>Inglês</div>
                 </li>
                 <li class="curriculum">
                   <a
@@ -743,24 +718,24 @@
             >
               <ul class="stack-list">
                 <li class="stack">
-                  <span>HTML</span>
+                  <span>javascript</span>
 
                   <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                  />
+                </li>
+                <li class="stack">
+                  <span>python</span>
+
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
                   />
                 </li>
                 <li class="stack">
                   <span>css</span>
 
                   <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg"
-                  />
-                </li>
-                <li class="stack">
-                  <span>javascript</span>
-
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
                   />
                 </li>
                 <li class="stack">
@@ -768,13 +743,6 @@
 
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                  />
-                </li>
-                <li class="stack">
-                  <span>git</span>
-
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
                   />
                 </li>
                 <li class="stack">
@@ -787,13 +755,27 @@
                   <span>bootstrap</span>
 
                   <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
                   />
                 </li>
                 <li class="stack">
                   <span>bulma</span>
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bulma/bulma-plain.svg"
+                  />
+                </li>
+                <li class="stack">
+                  <span>git</span>
+
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                  />
+                </li>
+                <li class="stack">
+                  <span>figma</span>
+
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
                   />
                 </li>
               </ul>
@@ -809,6 +791,7 @@
             <form
               action="https://formsubmit.co/ajax/087e5501f31f8819593b95db86ce3e97"
               method="POST"
+              enctype="multipart/form-data"
               data-form
               data-aos="fade-up-right"
             >
@@ -837,7 +820,7 @@
                 required
                 id="mensage"
                 name="mensage"
-                placeholder="Digite sua mensagem, proposta, sugestão ou crítica aqui."
+                placeholder="Deixe sua mensagem, proposta, sugestão ou crítica aqui."
               ></textarea>
               <button class="contact button-contact" type="submit" data-button>
                 Enviar

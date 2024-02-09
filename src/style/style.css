@@ -306,7 +306,7 @@ main .section-screen {
 }
 main .txt-area h1 {
   user-select: none;
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 main .txt-area h1 span {
   filter: drop-shadow(-0.2rem 0 0 #108944);
@@ -413,14 +413,14 @@ main #welcome {
   gap: 4rem;
 }
 main #welcome .txt-welcome {
-  font-size: 4rem;
+  font-size: 3.5rem;
   height: 75%;
-  text-align: left;
+  text-align: center;
   user-select: none;
   filter: drop-shadow(-0.2rem 0 0 #108944);
 }
 main #welcome .txt-welcome span {
-  background: linear-gradient(90deg, #f2ce66 38.56%, #108944 67.55%);
+  background: linear-gradient(90deg, #f2ce66 38.56%, #f2ce66 67.55%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -428,7 +428,7 @@ main #welcome .contact {
   position: relative;
   width: 16rem;
   height: 4rem;
-  margin-left: 2rem;
+  margin: 0rem auto;
 }
 main #welcome .contact a {
   width: 100%;
@@ -627,7 +627,7 @@ main #portfolio .web-sites .pagination {
   left: 45%;
 }
 main #portfolio .web-sites .swiper-pagination-bullet {
-  background: linear-gradient(90deg, #f2ce66 38.56%, #108944 67.55%);
+  background: linear-gradient(90deg, #f2ce66 38.56%, #f2ce66 67.55%);
 }
 main #portfolio .web-sites .swiper-pagination-bullet-active:nth-child(odd) {
   background: #f2ce66;
@@ -684,7 +684,7 @@ main #about .informations .infos li.info-stack {
   border-bottom: 1px solid rgba(206, 206, 206, 0.5019607843);
 }
 main #about .informations .infos li.info-bio {
-  text-align: justify;
+  text-align: left;
 }
 main #about .informations .infos li.info-tags {
   display: flex;
@@ -848,7 +848,7 @@ main #contact .formu form textarea {
   height: 4rem;
   min-height: 4rem;
   max-height: 8rem;
-  min-width: 10rem;
+  min-width: 16rem;
   max-width: 32rem;
 }
 main #contact .formu form button {
@@ -1136,7 +1136,7 @@ footer .rex {
   main #welcome .contact {
     width: 16rem;
     height: 4rem;
-    margin-left: 0rem;
+    margin: 4rem auto;
   }
   main #welcome .contact a {
     font-size: 2rem;
